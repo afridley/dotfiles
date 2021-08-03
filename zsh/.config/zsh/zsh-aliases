@@ -44,6 +44,10 @@ alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
 
 alias mach_java_mode="export SDKMAN_DIR="/home/chris/.sdkman" && [[ -s "/home/chris/.sdkman/bin/sdkman-init.sh" ]] && source "/home/chris/.sdkman/bin/sdkman-init.sh""
 
+alias pro="cd ~/Projects/nestlecareers && nvim"
+alias nconf="nvim ~/.config/nvim"
+alias mconf="nvim ~/.config"
+
 alias m="git checkout master"
 alias s="git checkout stable"
 
