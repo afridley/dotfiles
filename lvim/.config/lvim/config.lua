@@ -104,24 +104,24 @@ lvim.plugins = {
   {"fcpg/vim-farout"},
   {"navarasu/onedark.nvim"},
   {"qbbr/vim-twig"},
-  -- {"glepnir/lspsaga.nvim"}
+  {"glepnir/lspsaga.nvim"}
 
   -- {"benbusby/vim-earthbound-themes"} -- wow thats not great
 
   -- {"Domino881/kuczy"} --artifact
 }
-lvim.lang.javascript.formatters = {
-  {
-    exe = "prettier", -- can be prettierd eslint, or eslint_d as well
-    args = {},
-  },
-}
-lvim.lang.javascriptreact.formatters = {
-  {
-    exe = "prettier", -- can be prettierd eslint, or eslint_d as well
-    args = {},
-  },
-}
+-- lvim.lang.javascript.formatters = {
+--   {
+--     exe = "prettier", -- can be prettierd eslint, or eslint_d as well
+--     args = {},
+--   },
+-- }
+-- lvim.lang.javascriptreact.formatters = {
+--   {
+--     exe = "prettier", -- can be prettierd eslint, or eslint_d as well
+--     args = {},
+--   },
+-- }
 
 lvim.lang.javascript.linters = {
   {
@@ -140,18 +140,18 @@ lvim.lang.javascriptreact.linters = {
   },
 }
 
-lvim.lang.typescript.formatters = {
-  {
-    exe = "prettier", -- can be prettierd, eslint or eslint_d as well
-    args = {},
-  },
-}
-lvim.lang.typescriptreact.formatters = {
-  {
-    exe = "prettier", -- can be prettierd, eslint or eslint_d as well
-    args = {},
-  },
-}
+-- lvim.lang.typescript.formatters = {
+--   {
+--     exe = "prettier", -- can be prettierd, eslint or eslint_d as well
+--     args = {},
+--   },
+-- }
+-- lvim.lang.typescriptreact.formatters = {
+--   {
+--     exe = "prettier", -- can be prettierd, eslint or eslint_d as well
+--     args = {},
+--   },
+-- }
 
 lvim.lang.typescript.linters = {
   {
