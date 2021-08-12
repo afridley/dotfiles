@@ -71,16 +71,11 @@ lvim.plugins = {
     config = function() require"lsp_signature".on_attach() end,
     event = "InsertEnter"
   },
-  {"blackCauldron7/surround.nvim",
-    config = function()
-    require "surround".setup {}
-    end
-  },
-  {"norcalli/nvim-colorizer.lua",
-    config = function ()
-      require 'colorizer'.setup()
-    end
-  },
+  -- {"norcalli/nvim-colorizer.lua",
+  --   config = function ()
+  --     require 'colorizer'.setup()
+  --   end
+  -- },
   {"folke/tokyonight.nvim"},
   {"sainnhe/everforest"},
   -- {"gruvbox-community/gruvbox"},
@@ -104,9 +99,62 @@ lvim.plugins = {
   {"fcpg/vim-farout"},
   {"navarasu/onedark.nvim"},
   {"qbbr/vim-twig"},
-  {"glepnir/lspsaga.nvim"}
-
-  -- {"benbusby/vim-earthbound-themes"} -- wow thats not great
+  {"glepnir/lspsaga.nvim"},
+  {
+    "folke/lsp-colors.nvim",
+    event = "BufRead",
+  },
+  {
+    "norcalli/nvim-colorizer.lua",
+      config = function()
+        require("colorizer").setup({ "*" }, {
+            RGB = true, -- #RGB hex codes
+            RRGGBB = true, -- #RRGGBB hex codes
+            RRGGBBAA = true, -- #RRGGBBAA hex codes
+            rgb_fn = true, -- CSS rgb() and rgba() functions
+            hsl_fn = true, -- CSS hsl() and hsla() functions
+            css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+            css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+            })
+    end,
+  },
+  -- {
+  --   "karb94/neoscroll.nvim",
+  --   event = "WinScrolled",
+  --   config = function()
+  --   require('neoscroll').setup({
+  --         -- All these keys will be mapped to their corresponding default scrolling animation
+  --         mappings = {'<C-u>', '<C-d>', '<C-b>', '<C-f>',
+  --         '<C-y>', '<C-e>', 'zt', 'zz', 'zb'},
+  --         hide_cursor = true,          -- Hide cursor while scrolling
+  --         stop_eof = true,             -- Stop at <EOF> when scrolling downwards
+  --         use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
+  --         respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
+  --         cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
+  --         easing_function = nil,        -- Default easing function
+  --         pre_hook = nil,              -- Function to run before the scrolling animation starts
+  --         post_hook = nil,              -- Function to run after the scrolling animation ends
+  --         })
+  --   end
+  -- },
+  {
+    "nvim-telescope/telescope-fzy-native.nvim",
+    run = "make",
+    event = "BufRead",
+  },
+  -- {
+  --   "tpope/vim-surround",
+  --   keys = {"c", "d", "y"}
+  -- },
+  -- {"p00f/nvim-ts-rainbow"},
+  -- {
+  --   "windwp/nvim-ts-autotag",
+  --   event = "InsertEnter",
+  -- },
+  -- {
+  --   "JoosepAlviste/nvim-ts-context-commentstring",
+  --   event = "BufRead",
+  -- },
 
   -- {"Domino881/kuczy"} --artifact
 }
@@ -171,6 +219,8 @@ lvim.lang.typescriptreact.linters = {
 }
 
 -- lvim.transparent_window = true
+-- lvim.builtin.treesitter.rainbow = true
+-- lvim.builtin.treesitter.autotag = true
 -- O.guifont = "JetBrainsMono Nerd Font"
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_italic_functions = true
@@ -212,11 +262,14 @@ vim.cmd("nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll
 
 lvim.builtin.telescope.on_config_done = function()
   local actions = require "telescope.actions"
-  lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
+  -- for input mode
   lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
   lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
   lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
   lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
+  -- for normal mode
+  lvim.builtin.telescope.defaults.mappings.n["<C-j>"] = actions.move_selection_next
+  lvim.builtin.telescope.defaults.mappings.n["<C-k>"] = actions.move_selection_previous
 end
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
