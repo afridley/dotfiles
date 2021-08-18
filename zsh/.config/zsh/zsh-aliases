@@ -46,9 +46,9 @@ alias mach_java_mode="export SDKMAN_DIR="/home/chris/.sdkman" && [[ -s "/home/ch
 
 alias pro="cd ~/Projects/nestlecareers && nvim"
 alias prof="cd ~/Projects/nestlecareers/docroot/modules/custom/nc_map/frontend"
-alias nroot="nvim ~/.local/share/lunarvim"
-alias nconf="nvim ~/.config/lvim"
-alias mconf="nvim ~/.config"
+alias nroot="cd ~/.local/share/lunarvim && nvim"
+alias nconf="~/.config/lvim && nvim"
+alias mconf="cd ~/dotfiles && nvim"
 alias nvim="lvim"
 
 alias m="git checkout master"
