@@ -4,6 +4,15 @@
 lvim.format_on_save = true
 lvim.lint_on_save = true
 lvim.colorscheme = "miramare"
+lvim.builtin.treesitter.autotag = {
+  enable = true
+}
+lvim.builtin.treesitter.rainbow = {
+  enable = true
+}
+lvim.builtin.treesitter.context_commentstring = {
+  enable = true
+}
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -172,81 +181,73 @@ lvim.plugins = {
   --   "tpope/vim-surround",
   --   keys = {"c", "d", "y"}
   -- },
-  -- {"p00f/nvim-ts-rainbow"},
-  -- {
-  --   "windwp/nvim-ts-autotag",
-  --   event = "InsertEnter",
-  -- },
-  -- {
-  --   "JoosepAlviste/nvim-ts-context-commentstring",
-  --   event = "BufRead",
-  -- },
+  {"p00f/nvim-ts-rainbow"},
+  {
+    "windwp/nvim-ts-autotag",
+    event = "InsertEnter",
+  },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    event = "BufRead",
+  },
 
   -- {"Domino881/kuczy"} --artifact
 }
--- lvim.lang.javascript.formatters = {
---   {
---     exe = "prettier", -- can be prettierd eslint, or eslint_d as well
---     args = {},
---   },
--- }
--- lvim.lang.javascriptreact.formatters = {
---   {
---     exe = "prettier", -- can be prettierd eslint, or eslint_d as well
---     args = {},
---   },
--- }
 
 lvim.lang.javascript.linters = {
   {
     exe = "eslint", -- can be eslint_d as well
-    args = {
-      eslint_enable_code_actions = true
-    },
+    args = {},
   },
 }
 lvim.lang.javascriptreact.linters = {
   {
     exe = "eslint", -- can be eslint_d as well
-    args = {
-      eslint_enable_code_actions = true
-    },
+    args = {},
   },
 }
-
--- lvim.lang.typescript.formatters = {
---   {
---     exe = "prettier", -- can be prettierd, eslint or eslint_d as well
---     args = {},
---   },
--- }
--- lvim.lang.typescriptreact.formatters = {
---   {
---     exe = "prettier", -- can be prettierd, eslint or eslint_d as well
---     args = {},
---   },
--- }
-
 lvim.lang.typescript.linters = {
   {
     exe = "eslint", -- can be eslint_d as well
-    args = {
-      eslint_enable_code_actions = true
-    },
+    args = {},
   },
 }
 lvim.lang.typescriptreact.linters = {
   {
     exe = "eslint", -- can be eslint_d as well
-    args = {
-      eslint_enable_code_actions = true
-    },
+    args = {},
+  },
+}
+lvim.lang.javascript.formatters = {
+  {
+    exe = "prettier", -- can be prettierd eslint, or eslint_d as well
+    args = {},
+  },
+}
+lvim.lang.javascriptreact.formatters = {
+  {
+    exe = "prettier", -- can be prettierd eslint, or eslint_d as well
+    args = {},
   },
 }
 
+lvim.lang.typescript.formatters = {
+  {
+    exe = "prettier", -- can be prettierd, eslint or eslint_d as well
+    args = {},
+  },
+}
+lvim.lang.typescriptreact.formatters = {
+  {
+    exe = "prettier", -- can be prettierd, eslint or eslint_d as well
+    args = {},
+  },
+}
+
+
 -- lvim.transparent_window = true
 -- lvim.builtin.treesitter.rainbow = true
--- lvim.builtin.treesitter.autotag = true
+-- lvim.builtin.treesitter. = true
 -- O.guifont = "JetBrainsMono Nerd Font"
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_italic_functions = true
