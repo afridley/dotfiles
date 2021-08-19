@@ -245,9 +245,7 @@ lvim.lang.typescriptreact.formatters = {
 }
 
 
--- lvim.transparent_window = true
--- lvim.builtin.treesitter.rainbow = true
--- lvim.builtin.treesitter. = true
+lvim.transparent_window = true
 -- O.guifont = "JetBrainsMono Nerd Font"
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_italic_functions = true

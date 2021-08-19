@@ -485,149 +485,156 @@ def init_colors():
 colors = init_colors()
 
 # for with poly
-def init_screens():
-    return [Screen(top=bar.Gap(size=34), width=500, height=500),
-            Screen(top=bar.Gap(size=34), width=500, height=500)]
-screens = init_screens()
+# def init_screens():
+#     return [Screen(top=bar.Gap(size=34), width=500, height=500),
+#             Screen(top=bar.Gap(size=34), width=500, height=500)]
+# screens = init_screens()
 
 #For other bar
-# bar_font = 30
-# widget_padding = 40
-# bar_height = 50
+bar_font = 30
+widget_padding = 40
+bar_height = 50
 
-# bar_settings = [
-#     widget.GroupBox(
-#         disable_drag=True,
-#         highlight_method="line",
-#         # highlight_color=['#000000', '#000000'],
-#         this_current_screen_border=mainColor,
-#         this_screen_border=mainColorDimmed,
-#         other_current_screen_border=mainColor,
-#         other_screen_border=mainColorDimmed,
-#         border_color=mainColorDimmed,
-#         # visible_groups=get_workspace_groups(wsp['current']),
-#         fontsize=bar_font,
-#         spacing=0,
-#         borderwidth=2,
-#         padding=20,
-#     ),
-#     #  widget.Prompt(
-#     #      prompt="run: ",
-#     #      ignore_dups_history=True,
-#     #  ),
-#     widget.WindowName(fontsize=bar_font),
+bar_settings = [
+    widget.GroupBox(
+        disable_drag=True,
+        highlight_method="line",
+        center_aligned=True,
+        highlight_color=['#00000000', mainColorDimmed],
+        this_current_screen_border=mainColor,
+        this_screen_border=mainColorDimmed,
+        other_current_screen_border=mainColor,
+        other_screen_border=mainColorDimmed,
+        border_color=mainColorDimmed,
+        # visible_groups=get_workspace_groups(wsp['current']),
+        fontsize=bar_font,
+        font='SF Pro Display',
+        spacing=0,
+        margin_x=0,
+        borderwidth=3,
+        padding=20,
+    ),
+    #  widget.Prompt(
+    #      prompt="run: ",
+    #      ignore_dups_history=True,
+    #  ),
+    widget.WindowName(fontsize=bar_font),
 
-#     widget.ThermalSensor(
-#         foreground=colors[5],
-#         foreground_alert=colors[6],
-#         # background = ((100, 100, 100, .5), True),
-#         fontsize=bar_font,
-#         metric=True,
-#         padding=40,
-#         threshold=80
-#     ),
-#     #  widget.CPUGraph(
-#     #      width=50,
-#     #      border_width=1,
-#     #      border_color="#000000",
-#     #      frequency=5,
-#     #      line_width=1,
-#     #      samples=50,
-#     #  ),
-#     #  widget.MemoryGraph(
-#     #      width=50,
-#     #      border_width=1,
-#     #      border_color="#000000",
-#     #      line_width=1,
-#     #      frequency=5,
-#     #      fill_color="EEE8AA",
-#     #      padding=20
-#     #  ),
-#     widget.Volume(fontsize=bar_font, update_interval=2,
-#                   padding=widget_padding),
-#     # widget.Systray(),
-#     widget.Clock(
-#         fontsize=bar_font,
-#         # format='%a %b %d, %H:%M',
-#         format="%I:%M %p",
-#     ),
-#     widget.CurrentLayoutIcon(scale=0.65),
-# ]
+    widget.ThermalSensor(
+        foreground=colors[5],
+        foreground_alert=colors[6],
+        # background = ((100, 100, 100, .5), True),
+        fontsize=bar_font,
+        metric=True,
+        padding=40,
+        threshold=80
+    ),
+    #  widget.CPUGraph(
+    #      width=50,
+    #      border_width=1,
+    #      border_color="#000000",
+    #      frequency=5,
+    #      line_width=1,
+    #      samples=50,
+    #  ),
+    #  widget.MemoryGraph(
+    #      width=50,
+    #      border_width=1,
+    #      border_color="#000000",
+    #      line_width=1,
+    #      frequency=5,
+    #      fill_color="EEE8AA",
+    #      padding=20
+    #  ),
+    widget.Volume(fontsize=bar_font, update_interval=2,
+                  padding=widget_padding),
+    # widget.Systray(),
+    widget.Clock(
+        fontsize=bar_font,
+        # format='%a %b %d, %H:%M',
+        format="%I:%M %p",
+    ),
+    widget.CurrentLayoutIcon(scale=0.65),
+]
 
-# bar_settings2 = [
-#     widget.GroupBox(
-#         disable_drag=True,
-#         highlight_method="line",
-#         # highlight_color=['#000000', '#000000'],
-#         this_current_screen_border=mainColor,
-#         this_screen_border=mainColorDimmed,
-#         other_current_screen_border=mainColor,
-#         other_screen_border=mainColorDimmed,
-#         border_color=mainColorDimmed,
-#         # visible_groups=get_workspace_groups(wsp['current']),
-#         fontsize=bar_font,
-#         spacing=0,
-#         borderwidth=2,
-#         padding=20,
-#     ),
-#     #  widget.Prompt(
-#     #      prompt="run: ",
-#     #      ignore_dups_history=True,
-#     #  ),
-#     widget.WindowName(fontsize=bar_font),
+bar_settings2 = [
+    widget.GroupBox(
+        disable_drag=True,
+        highlight_method="line",
+        center_aligned=True,
+        highlight_color=['#00000000', mainColorDimmed],
+        this_current_screen_border=mainColor,
+        this_screen_border=mainColorDimmed,
+        other_current_screen_border=mainColor,
+        other_screen_border=mainColorDimmed,
+        border_color=mainColorDimmed,
+        # visible_groups=get_workspace_groups(wsp['current']),
+        fontsize=bar_font,
+        font='SF Pro Display',
+        spacing=0,
+        margin_x=0,
+        borderwidth=3,
+        padding=20,
+    ),
+    #  widget.Prompt(
+    #      prompt="run: ",
+    #      ignore_dups_history=True,
+    #  ),
+    widget.WindowName(fontsize=bar_font),
 
-#     widget.ThermalSensor(
-#         foreground=colors[5],
-#         foreground_alert=colors[6],
-#         # background = colors[1],
-#         fontsize=bar_font,
-#         metric=True,
-#         padding=40,
-#         threshold=80
-#     ),
-#     #  widget.CPUGraph(
-#     #      width=50,
-#     #      border_width=1,
-#     #      border_color="#000000",
-#     #      frequency=5,
-#     #      line_width=1,
-#     #      samples=50,
-#     #  ),
-#     #  widget.MemoryGraph(
-#     #      width=50,
-#     #      border_width=1,
-#     #      border_color="#000000",
-#     #      line_width=1,
-#     #      frequency=5,
-#     #      fill_color="EEE8AA",
-#     #      padding=20
-#     #  ),
-#     widget.Volume(fontsize=bar_font, update_interval=2,
-#                   padding=widget_padding),
-#     # widget.Systray(),
-#     widget.Clock(
-#         fontsize=bar_font,
-#         # format='%a %b %d, %H:%M',
-#         format="%I:%M %p",
-#     ),
-#     widget.CurrentLayoutIcon(scale=0.65),
-# ]
+    widget.ThermalSensor(
+        foreground=colors[5],
+        foreground_alert=colors[6],
+        # background = ((100, 100, 100, .5), True),
+        fontsize=bar_font,
+        metric=True,
+        padding=40,
+        threshold=80
+    ),
+    #  widget.CPUGraph(
+    #      width=50,
+    #      border_width=1,
+    #      border_color="#000000",
+    #      frequency=5,
+    #      line_width=1,
+    #      samples=50,
+    #  ),
+    #  widget.MemoryGraph(
+    #      width=50,
+    #      border_width=1,
+    #      border_color="#000000",
+    #      line_width=1,
+    #      frequency=5,
+    #      fill_color="EEE8AA",
+    #      padding=20
+    #  ),
+    widget.Volume(fontsize=bar_font, update_interval=2,
+                  padding=widget_padding),
+    # widget.Systray(),
+    widget.Clock(
+        fontsize=bar_font,
+        # format='%a %b %d, %H:%M',
+        format="%I:%M %p",
+    ),
+    widget.CurrentLayoutIcon(scale=0.65),
+]
 
-# new_bar1 = bar.Bar(bar_settings, bar_height, background="#ffffffaa")
-# new_bar2 = bar.Bar(bar_settings2, bar_height)
-
-
-# def init_screen1():
-#     return Screen(top=new_bar1)
-
-
-# def init_screen2():
-#     return Screen(top=new_bar2)
+# new_bar1 = bar.Bar(bar_settings, bar_height, background="#00000041", margin=[0, 50, 0, 50])
+new_bar1 = bar.Bar(bar_settings, bar_height, background="#00000041")
+new_bar2 = bar.Bar(bar_settings2, bar_height, background="#00000041")
 
 
-# screen1 = init_screen1()
-# screen2 = init_screen2()
-# screens = [screen1, screen2]
+def init_screen1():
+    return Screen(top=new_bar1)
+
+
+def init_screen2():
+    return Screen(top=new_bar2)
+
+
+screen1 = init_screen1()
+screen2 = init_screen2()
+screens = [screen1, screen2]
 
 # MOUSE CONFIGURATION
 mouse = [
