@@ -601,7 +601,7 @@ bar_settings2 = [
         active="#ffffff88",
         block_highlight_text_color="#FFFFFF",
         # background="#55555541",
-        background=(mgrey, mgrey, mgrey, .1),
+        background=(mgrey, mgrey, mgrey, .3),
     ),
     widget.TextBox(
         text="  ",
@@ -612,7 +612,7 @@ bar_settings2 = [
         # foreground="#55555541",
         # background="#FFFFFF55",
         # foreground="#FFFFFF55",
-        foreground=(255, 255, 255, .30),
+        foreground=(mgrey2, mgrey2, mgrey2, .3),
         # background=(255, 255, 255, .5)
     ),
     #  widget.Prompt(
