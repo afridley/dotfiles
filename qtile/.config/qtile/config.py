@@ -494,13 +494,14 @@ colors = init_colors()
 bar_font = 30
 widget_padding = 40
 bar_height = 50
-
+mgrey=70
+mgrey2= mgrey + 39
 bar_settings = [
     widget.GroupBox(
         disable_drag=True,
         highlight_method="line",
         center_aligned=True,
-        highlight_color=['#00000000', mainColorDimmed],
+        highlight_color=[(215, 215, 215, 0), mainColorDimmed],
         this_current_screen_border=mainColor,
         this_screen_border=mainColorDimmed,
         other_current_screen_border=mainColor,
@@ -513,6 +514,25 @@ bar_settings = [
         margin_x=0,
         borderwidth=3,
         padding=20,
+        hide_unused=True,
+        # inactive="#FFFFFF22",
+        # foreground=mainColor,
+        active="#ffffff88",
+        block_highlight_text_color="#FFFFFF",
+        # background="#55555541",
+        background=(mgrey, mgrey, mgrey, .3),
+    ),
+    widget.TextBox(
+        text="  ",
+        fontsize=50,
+        font='JetBrainsMono Nerd Font',
+        padding=0,
+        # foreground="#FFFFFF19",
+        # foreground="#55555541",
+        # background="#FFFFFF55",
+        # foreground="#FFFFFF55",
+        foreground=(mgrey2, mgrey2, mgrey2, .3),
+        # background=(255, 255, 255, .5)
     ),
     #  widget.Prompt(
     #      prompt="run: ",
@@ -562,7 +582,7 @@ bar_settings2 = [
         disable_drag=True,
         highlight_method="line",
         center_aligned=True,
-        highlight_color=['#00000000', mainColorDimmed],
+        highlight_color=[(215, 215, 215, 0), mainColorDimmed],
         this_current_screen_border=mainColor,
         this_screen_border=mainColorDimmed,
         other_current_screen_border=mainColor,
@@ -575,6 +595,25 @@ bar_settings2 = [
         margin_x=0,
         borderwidth=3,
         padding=20,
+        hide_unused=True,
+        # inactive="#FFFFFF22",
+        # foreground=mainColor,
+        active="#ffffff88",
+        block_highlight_text_color="#FFFFFF",
+        # background="#55555541",
+        background=(mgrey, mgrey, mgrey, .1),
+    ),
+    widget.TextBox(
+        text="  ",
+        fontsize=50,
+        font='JetBrainsMono Nerd Font',
+        padding=0,
+        # foreground="#FFFFFF19",
+        # foreground="#55555541",
+        # background="#FFFFFF55",
+        # foreground="#FFFFFF55",
+        foreground=(255, 255, 255, .30),
+        # background=(255, 255, 255, .5)
     ),
     #  widget.Prompt(
     #      prompt="run: ",
