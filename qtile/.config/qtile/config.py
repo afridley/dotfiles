@@ -497,6 +497,18 @@ bar_height = 50
 mgrey=70
 mgrey2= mgrey + 39
 bar_settings = [
+    widget.TextBox(
+            text="  ",
+            fontsize=30,
+            font='JetBrainsMono Nerd Font',
+            padding=10,
+            # foreground="#FFFFFF19",
+            # foreground="#55555541",
+            # background="#FFFFFF55",
+            # foreground="#FFFFFF55",
+            foreground=(mgrey2, mgrey2, mgrey2, .7),
+            background=(mgrey, mgrey, mgrey, .3)
+    ),
     widget.GroupBox(
         disable_drag=True,
         highlight_method="line",
@@ -538,7 +550,7 @@ bar_settings = [
     #      prompt="run: ",
     #      ignore_dups_history=True,
     #  ),
-    widget.WindowName(fontsize=bar_font),
+    widget.WindowName(fontsize=bar_font, foreground=mainColor),
 
     widget.ThermalSensor(
         foreground=colors[5],
@@ -578,6 +590,18 @@ bar_settings = [
 ]
 
 bar_settings2 = [
+   widget.TextBox(
+            text="  ",
+            fontsize=30,
+            font='JetBrainsMono Nerd Font',
+            padding=10,
+            # foreground="#FFFFFF19",
+            # foreground="#55555541",
+            # background="#FFFFFF55",
+            # foreground="#FFFFFF55",
+            foreground=(mgrey2, mgrey2, mgrey2, .7),
+            background=(mgrey, mgrey, mgrey, .3)
+    ),
     widget.GroupBox(
         disable_drag=True,
         highlight_method="line",
@@ -619,7 +643,7 @@ bar_settings2 = [
     #      prompt="run: ",
     #      ignore_dups_history=True,
     #  ),
-    widget.WindowName(fontsize=bar_font),
+    widget.WindowName(fontsize=bar_font, foreground=mainColor),
 
     widget.ThermalSensor(
         foreground=colors[5],
