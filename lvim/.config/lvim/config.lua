@@ -3,7 +3,7 @@
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
-lvim.colorscheme = "farout"
+lvim.colorscheme = "tokyonight"
 lvim.builtin.treesitter.autotag = {
   enable = true
 }
