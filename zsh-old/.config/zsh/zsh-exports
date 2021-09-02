@@ -1,5 +1,5 @@
 #!/bin/sh
-# HISTFILE="$XDG_DATA_HOME"/zsh/history
+HISTFILE="$XDG_DATA_HOME"/zsh/history
 HISTSIZE=1000000
 SAVEHIST=1000000
 export PATH="$HOME/.local/bin":$PATH
@@ -8,7 +8,6 @@ export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
-export PATH=/home/chris/.fnm:$PATH
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
 # eval "`pip completion --zsh`"
