@@ -41,11 +41,12 @@ from libqtile.log_utils import logger
 # Green #44CC99 #118877
 # Blue #6790EB #3560a9
 # yellow #ffcc55 #cc7722
+# red #ff7722 #cc7722
 mod = "mod4"
 mod1 = "alt"
 mod2 = "control"
-mainColor = "#ffcc55"
-mainColorDimmed = "#cc7722"
+mainColor = "#ff7722"
+mainColorDimmed = "#883322"
 mainUnfocusedColor = "#222222"
 home = os.path.expanduser('~')
 
@@ -513,7 +514,7 @@ bar_settings = [
         disable_drag=True,
         highlight_method="line",
         center_aligned=True,
-        highlight_color=[(215, 215, 215, 0), mainColorDimmed],
+        highlight_color=[(215, 215, 215, 0), mainColor],
         this_current_screen_border=mainColor,
         this_screen_border=mainColorDimmed,
         other_current_screen_border=mainColor,
@@ -584,7 +585,8 @@ bar_settings = [
     widget.Clock(
         fontsize=bar_font,
         # format='%a %b %d, %H:%M',
-        format="%I:%M %p",
+        format="%I:%M %p | %d %b",
+        foreground=mainColor,
     ),
     widget.CurrentLayoutIcon(scale=0.65),
 ]
