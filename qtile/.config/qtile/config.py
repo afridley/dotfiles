@@ -497,8 +497,8 @@ widget_padding = 40
 bar_height = 50
 mgrey=70
 mgrey2= mgrey + 39
-bar_settings = [
-    widget.TextBox(
+def bar_widgets(): 
+    yield widget.TextBox(
             text="  ",
             fontsize=30,
             font='JetBrainsMono Nerd Font',
@@ -509,8 +509,8 @@ bar_settings = [
             # foreground="#FFFFFF55",
             foreground=(mgrey2, mgrey2, mgrey2, .7),
             background=(mgrey, mgrey, mgrey, .3)
-    ),
-    widget.GroupBox(
+    )
+    yield widget.GroupBox(
         disable_drag=True,
         highlight_method="line",
         center_aligned=True,
@@ -534,8 +534,8 @@ bar_settings = [
         block_highlight_text_color="#FFFFFF",
         # background="#55555541",
         background=(mgrey, mgrey, mgrey, .3),
-    ),
-    widget.TextBox(
+    )
+    yield widget.TextBox(
         text="  ",
         fontsize=50,
         font='JetBrainsMono Nerd Font',
@@ -545,15 +545,17 @@ bar_settings = [
         # background="#FFFFFF55",
         # foreground="#FFFFFF55",
         foreground=(mgrey2, mgrey2, mgrey2, .3),
+        # forground=(70, 70, 70, .2),
+        
         # background=(255, 255, 255, .5)
-    ),
-    #  widget.Prompt(
+    )
+    #  yield widget.Prompt(
     #      prompt="run: ",
     #      ignore_dups_history=True,
-    #  ),
-    widget.WindowName(fontsize=bar_font, foreground=mainColor),
+    #  )
+    yield widget.WindowName(fontsize=bar_font, foreground=mainColor)
 
-    widget.ThermalSensor(
+    yield widget.ThermalSensor(
         foreground=colors[5],
         foreground_alert=colors[6],
         # background = ((100, 100, 100, .5), True),
@@ -561,16 +563,16 @@ bar_settings = [
         metric=True,
         padding=40,
         threshold=80
-    ),
-    #  widget.CPUGraph(
+    )
+    #  yield widget.CPUGraph(
     #      width=50,
     #      border_width=1,
     #      border_color="#000000",
     #      frequency=5,
     #      line_width=1,
     #      samples=50,
-    #  ),
-    #  widget.MemoryGraph(
+    #  )
+    #  yield widget.MemoryGraph(
     #      width=50,
     #      border_width=1,
     #      border_color="#000000",
@@ -578,128 +580,31 @@ bar_settings = [
     #      frequency=5,
     #      fill_color="EEE8AA",
     #      padding=20
-    #  ),
-    widget.Volume(fontsize=bar_font, update_interval=2,
-                  padding=widget_padding),
-    # widget.Systray(),
-    widget.Clock(
+    #  )
+    yield widget.Volume(fontsize=bar_font, update_interval=2,
+                  padding=widget_padding)
+    # yield widget.Systray()
+    yield widget.Clock(
         fontsize=bar_font,
         # format='%a %b %d, %H:%M',
         format="%I:%M %p | %d %b",
         foreground=mainColor,
-    ),
-    widget.CurrentLayoutIcon(scale=0.65),
-]
-
-bar_settings2 = [
-   widget.TextBox(
-            text="  ",
-            fontsize=30,
-            font='JetBrainsMono Nerd Font',
-            padding=10,
-            # foreground="#FFFFFF19",
-            # foreground="#55555541",
-            # background="#FFFFFF55",
-            # foreground="#FFFFFF55",
-            foreground=(mgrey2, mgrey2, mgrey2, .7),
-            background=(mgrey, mgrey, mgrey, .3)
-    ),
-    widget.GroupBox(
-        disable_drag=True,
-        highlight_method="line",
-        center_aligned=True,
-        highlight_color=[(215, 215, 215, 0), mainColorDimmed],
-        this_current_screen_border=mainColor,
-        this_screen_border=mainColorDimmed,
-        other_current_screen_border=mainColor,
-        other_screen_border=mainColorDimmed,
-        border_color=mainColorDimmed,
-        # visible_groups=get_workspace_groups(wsp['current']),
-        fontsize=bar_font,
-        font='SF Pro Display',
-        spacing=0,
-        margin_x=0,
-        borderwidth=3,
-        padding=20,
-        hide_unused=True,
-        # inactive="#FFFFFF22",
-        # foreground=mainColor,
-        active="#ffffff88",
-        block_highlight_text_color="#FFFFFF",
-        # background="#55555541",
-        background=(mgrey, mgrey, mgrey, .3),
-    ),
-    widget.TextBox(
-        text="  ",
-        fontsize=50,
-        font='JetBrainsMono Nerd Font',
-        padding=0,
-        # foreground="#FFFFFF19",
-        # foreground="#55555541",
-        # background="#FFFFFF55",
-        # foreground="#FFFFFF55",
-        foreground=(mgrey2, mgrey2, mgrey2, .3),
-        # background=(255, 255, 255, .5)
-    ),
-    #  widget.Prompt(
-    #      prompt="run: ",
-    #      ignore_dups_history=True,
-    #  ),
-    widget.WindowName(fontsize=bar_font, foreground=mainColor),
-
-    widget.ThermalSensor(
-        foreground=colors[5],
-        foreground_alert=colors[6],
-        # background = ((100, 100, 100, .5), True),
-        fontsize=bar_font,
-        metric=True,
-        padding=40,
-        threshold=80
-    ),
-    #  widget.CPUGraph(
-    #      width=50,
-    #      border_width=1,
-    #      border_color="#000000",
-    #      frequency=5,
-    #      line_width=1,
-    #      samples=50,
-    #  ),
-    #  widget.MemoryGraph(
-    #      width=50,
-    #      border_width=1,
-    #      border_color="#000000",
-    #      line_width=1,
-    #      frequency=5,
-    #      fill_color="EEE8AA",
-    #      padding=20
-    #  ),
-    widget.Volume(fontsize=bar_font, update_interval=2,
-                  padding=widget_padding),
-    # widget.Systray(),
-    widget.Clock(
-        fontsize=bar_font,
-        # format='%a %b %d, %H:%M',
-        format="%I:%M %p",
-    ),
-    widget.CurrentLayoutIcon(scale=0.65),
-]
+    )
+    yield widget.CurrentLayoutIcon(scale=0.65)
 
 # new_bar1 = bar.Bar(bar_settings, bar_height, background="#00000041", margin=[0, 50, 0, 50])
-new_bar1 = bar.Bar(bar_settings, bar_height, background="#00000041")
-new_bar2 = bar.Bar(bar_settings2, bar_height, background="#00000041")
-
-
-def init_screen1():
-    return Screen(top=new_bar1)
-
-
-def init_screen2():
-    return Screen(top=new_bar2)
-
-
-screen1 = init_screen1()
-screen2 = init_screen2()
-screens = [screen1, screen2]
+screens = [
+    Screen(top=bar.Bar(
+        list(bar_widgets()), 
+        bar_height, 
+        background="#00000041")
+    ),
+    Screen(top=bar.Bar(
+        list(bar_widgets()), 
+        bar_height, 
+        background="#00000041")
+    )
+]
 
 # MOUSE CONFIGURATION
 mouse = [
