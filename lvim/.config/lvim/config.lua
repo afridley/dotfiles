@@ -1,9 +1,11 @@
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
+lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.lint_on_save = true
 lvim.colorscheme = "tokyonight"
+-- lvim.timeoutlen = 300
 lvim.builtin.treesitter.autotag = {
   enable = true
 }
@@ -17,7 +19,7 @@ lvim.builtin.treesitter.context_commentstring = {
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+-- lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
@@ -25,15 +27,15 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>lua require'telescope'.extensions.project.project{}<CR>", "Projects" }
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnosticss" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
--- }
+lvim.builtin.which_key.mappings["t"] = {
+  name = "+Trouble",
+  r = { "<cmd>Trouble lsp_references<cr>", "References" },
+  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+  d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnosticss" },
+  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+  w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
+}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -79,6 +81,10 @@ lvim.plugins = {
     "ray-x/lsp_signature.nvim",
     config = function() require"lsp_signature".on_attach() end,
     event = "InsertEnter"
+  },
+  {
+   "folke/trouble.nvim",
+     cmd = "TroubleToggle",
   },
   -- {"norcalli/nvim-colorizer.lua",
   --   config = function ()
@@ -127,6 +133,14 @@ lvim.plugins = {
             })
     end,
   },
+  {
+  "blackCauldron7/surround.nvim",
+    config = function()
+      -- vim.g.surround_prefix = "<c-s>"
+      require("surround").setup({mappings_style = "sandwich"})
+    end
+  },
+
   -- {
   --   "karb94/neoscroll.nvim",
   --   event = "WinScrolled",
@@ -190,8 +204,21 @@ lvim.plugins = {
     "JoosepAlviste/nvim-ts-context-commentstring",
     event = "BufRead",
   },
-
   -- {"Domino881/kuczy"} --artifact
+}
+
+-- lvim.lang.scss.formatters = {
+--   {
+--     exe = "prettier", -- can be prettierd eslint, or eslint_d as well
+--     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte", "css", "scss", "html", "json", "yaml", "markdown" },
+--     args = {},
+--   },
+-- }
+lvim.lang.css.formatters = {
+  {
+    exe = "prettier", -- can be prettierd eslint, or eslint_d as well
+    args = {},
+  },
 }
 
 lvim.lang.javascript.linters = {
@@ -200,36 +227,23 @@ lvim.lang.javascript.linters = {
     args = {},
   },
 }
-lvim.lang.javascriptreact.linters = {
-  {
-    exe = "eslint", -- can be eslint_d as well
-    args = {},
-  },
-}
+lvim.lang.javascriptreact.linters = lvim.lang.javascript.linters
+
 lvim.lang.typescript.linters = {
   {
     exe = "eslint", -- can be eslint_d as well
     args = {},
   },
 }
-lvim.lang.typescriptreact.linters = {
-  {
-    exe = "eslint", -- can be eslint_d as well
-    args = {},
-  },
-}
+lvim.lang.typescriptreact.linters = lvim.lang.typescript.linters
+
 lvim.lang.javascript.formatters = {
   {
     exe = "prettier", -- can be prettierd eslint, or eslint_d as well
     args = {},
   },
 }
-lvim.lang.javascriptreact.formatters = {
-  {
-    exe = "prettier", -- can be prettierd eslint, or eslint_d as well
-    args = {},
-  },
-}
+lvim.lang.javascriptreact.formatters = lvim.lang.javascript.formatters
 
 lvim.lang.typescript.formatters = {
   {
@@ -237,12 +251,7 @@ lvim.lang.typescript.formatters = {
     args = {},
   },
 }
-lvim.lang.typescriptreact.formatters = {
-  {
-    exe = "prettier", -- can be prettierd, eslint or eslint_d as well
-    args = {},
-  },
-}
+lvim.lang.typescriptreact.formatters = lvim.lang.typescript.formatters
 
 
 lvim.transparent_window = true
@@ -303,3 +312,7 @@ end
 vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-x>', ':BufferClose<CR>', { noremap = true, silent = true })
+-- lvim.keys.visual_mode["<C-s>"] = ":lua require'surround'.surround_add()<CR>"
+-- vim.cmd("vnoremap <silent> <C-s> <cmd>lua require'surround'.surround_add()<cr>")
+
+-- vim.api.nvim_set_keymap('v', '<C-s>', "gv<cmd>lua require'surround'.surround_add()<CR>", { noremap = true, silent = true })
