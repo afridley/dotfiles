@@ -15,6 +15,7 @@ lvim.builtin.treesitter.rainbow = {
 lvim.builtin.treesitter.context_commentstring = {
   enable = true
 }
+ 
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
