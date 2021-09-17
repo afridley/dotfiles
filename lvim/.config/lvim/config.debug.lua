@@ -1,15 +1,8 @@
---[[
-lvim is the global options object
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
-]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
-lvim.log.level = "warn"
 lvim.format_on_save = true
+lvim.lint_on_save = true
 lvim.colorscheme = "onedarker"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -40,10 +33,10 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --   name = "+Trouble",
 --   r = { "<cmd>Trouble lsp_references<cr>", "References" },
 --   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
+--   d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnosticss" },
 --   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
 --   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
+--   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
 -- }
 
 -- TODO: User Config for predefined plugins
@@ -54,7 +47,7 @@ lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 
 -- if you don't want all the parsers change this to a table of the ones you want
-lvim.builtin.treesitter.ensure_installed = "maintained"
+lvim.builtin.treesitter.ensure_installed = {}
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
@@ -85,27 +78,27 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- end
 
 -- set a formatter if you want to override the default lsp one (if it exists)
-lvim.lang.typescript.formatters = {
+lvim.lang.css.formatters = {
   {
     exe = "prettier",
+    args = {}
   }
 }
-lvim.lang.typescriptreact.formatters = lvim.lang.typescript.formatters
 -- set an additional linter
-lvim.lang.typescript.linters = {
-  {
-    exe = "eslint",
-  }
-}
-lvim.lang.typescriptreact.linters = lvim.lang.typescript.linters
+-- lvim.lang.python.linters = {
+--   {
+--     exe = "flake8",
+--     args = {}
+--   }
+-- }
 
 -- Additional Plugins
 -- lvim.plugins = {
---     {"folke/tokyonight.nvim"},
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
+--     {"folke/tokyonight.nvim"}, {
+--         "ray-x/lsp_signature.nvim",
+--         config = function() require"lsp_signature".on_attach() end,
+--         event = "InsertEnter"
+--     }
 -- }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
