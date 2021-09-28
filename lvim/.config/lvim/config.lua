@@ -15,7 +15,7 @@ lvim.builtin.treesitter.rainbow = {
 lvim.builtin.treesitter.context_commentstring = {
   enable = true
 }
- 
+
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -211,7 +211,6 @@ lvim.plugins = {
 -- lvim.lang.scss.formatters = {
 --   {
 --     exe = "prettier", -- can be prettierd eslint, or eslint_d as well
---     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte", "css", "scss", "html", "json", "yaml", "markdown" },
 --     args = {},
 --   },
 -- }
