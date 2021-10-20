@@ -18,18 +18,18 @@ lvim.builtin.treesitter.autotag = {
 lvim.builtin.treesitter.rainbow = {
   enable = true
 }
--- lvim.builtin.treesitter.context_commentstring = {
---   enable = true
--- }
+lvim.builtin.treesitter.context_commentstring = {
+  enable = true
+}
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+-- lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
-lvim.keys.normal_mode["<C-Up>"] = ""
+-- lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
-lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
+-- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 lvim.builtin.telescope.on_config_done = function()
@@ -63,12 +63,64 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
 
-
 -- if you don't want all the parsers change this to a table of the ones you want
-
+-- lvim.builtin.treesitter.ensure_installed = {
+--   "bash",
+--   "c",
+--   "javascript",
+--   "json",
+--   "lua",
+--   "python",
+--   "typescript",
+--   "css",
+--   "rust",
+--   "java",
+--   "yaml",
+--   "graphql",
+-- }
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
+
+vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-x>', ':BufferClose<CR>', { noremap = true, silent = true })
+vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
+vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
+
+vim.cmd('vnoremap p "0p')
+vim.cmd('vnoremap P "0P')
+-- require('lvim.lsp.null-ls.formatters').setup({
+--     {
+--         exe = "eslint",
+--         filetypes = {
+--           "javascript", "vue", "typescript", "javascriptreact", "typescriptreact", "json"
+--         }
+
+--     },
+--     {
+--         exe = "prettier",
+--         filetypes = {
+--            "css", "scss", "javascript", "vue", "typescript", "javascriptreact", "typescriptreact", "json"
+--         }
+--     },
+-- })
+
+-- This is the only thing that works.
+local nls = require("null-ls")
+nls.config {
+    debounce = 150,
+    save_after_format = false,
+    sources = {
+      nls.builtins.formatting.prettier,
+      -- nls.builtins.formatting.stylua,
+      -- nls.builtins.formatting.goimports,
+      -- nls.builtins.formatting.shfmt.with { extra_args = { "-i", "2", "-ci" } },
+      nls.builtins.diagnostics.eslint_d,
+      -- nls.builtins.diagnostics.shellcheck,
+      -- nls.builtins.diagnostics.luacheck,
+    },
+}
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
@@ -97,6 +149,35 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- end
 
 -- set a formatter if you want to override the default lsp one (if it exists)
+-- lvim.lang.typescriptreact.formatters = {
+--   {
+--     exe = "prettier"
+--   }
+-- }
+-- lvim.lang.typescriptreact.linters = {
+--   {
+--     exe = "eslint"
+--   }
+-- }
+
+-- we would hope
+-- local formatters = require "lvim.lsp.null-ls.formatters"
+-- formatters.setup({{exe = "prettier", filetypes = {
+--   "javascriptreact",
+--       "javascript",
+--       "typescriptreact",
+--       "typescript",
+--       "json",
+--       "markdown",}}})
+
+-- local linters = require "lvim.lsp.null-ls.linters"
+-- linters.setup({{exe = "eslint", filetypes = {
+--  "javascriptreact",
+--       "javascript",
+--       "typescriptreact",
+--       "typescript",
+-- } }})
+
 -- lvim.lang.python.formatters = {
 --   {
 --     exe = "black",
@@ -111,48 +192,12 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   config = function() require"lsp_signature".on_attach() end,
-  --   event = "InsertEnter"
-  -- },
-  -- {
-  --  "folke/trouble.nvim",
-  --    cmd = "TroubleToggle",
-  -- },
-  -- {"norcalli/nvim-colorizer.lua",
-  --   config = function ()
-  --     require 'colorizer'.setup()
-  --   end
-  -- },
   {"folke/tokyonight.nvim"},
-  {"sainnhe/everforest"},
-  -- {"gruvbox-community/gruvbox"},
-  -- {"mhartington/oceanic-next"},
-  {"AlessandroYorba/Alduin"},
-  {"lukas-reineke/indent-blankline.nvim"},
-  {"franbach/miramare"},
-  {"savq/melange"},
-  {"sainnhe/gruvbox-material"},
-  -- {"ajmwagar/vim-deus"},
-  {"theniceboy/nvim-deus"},
-  {"glepnir/oceanic-material"},
-  {"AlessandroYorba/Despacio"},
-  {"wojciechkepka/bogster"},
-  -- {"kwsp/halcyon-neovim"}, --I wish
-  -- {"ronny/birds-of-paradise.vim"}, --artifact
-  {"UnikMask/iroh-vim"},
-  {"yashguptaz/calvera-dark.nvim"},
-  -- {"marreman/tsen-magenta-yellow"}, --would require manual
-  {"ayu-theme/ayu-vim"},
-  {"fcpg/vim-farout"},
-  {"navarasu/onedark.nvim"},
-  {"qbbr/vim-twig"},
-  {"glepnir/lspsaga.nvim"},
   {
-    "folke/lsp-colors.nvim",
-    event = "BufRead",
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
   },
+  {"p00f/nvim-ts-rainbow"},
   {
     "norcalli/nvim-colorizer.lua",
       config = function()
@@ -168,13 +213,6 @@ lvim.plugins = {
     end,
   },
   {
-  "blackCauldron7/surround.nvim",
-    config = function()
-      -- vim.g.surround_prefix = "<c-s>"
-      require("surround").setup({mappings_style = "sandwich"})
-    end
-  },
-  {
     "nvim-telescope/telescope-fzf-native.nvim",
     run = "make",
     after = "telescope.nvim",
@@ -183,30 +221,19 @@ lvim.plugins = {
     end,
   },
 
-  -- {
-  --   "karb94/neoscroll.nvim",
-  --   event = "WinScrolled",
-  --   config = function()
-  --   require('neoscroll').setup({
-  --         -- All these keys will be mapped to their corresponding default scrolling animation
-  --         mappings = {'<C-u>', '<C-d>', '<C-b>', '<C-f>',
-  --         '<C-y>', '<C-e>', 'zt', 'zz', 'zb'},
-  --         hide_cursor = true,          -- Hide cursor while scrolling
-  --         stop_eof = true,             -- Stop at <EOF> when scrolling downwards
-  --         use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
-  --         respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
-  --         cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
-  --         easing_function = nil,        -- Default easing function
-  --         pre_hook = nil,              -- Function to run before the scrolling animation starts
-  --         post_hook = nil,              -- Function to run after the scrolling animation ends
-  --         })
-  --   end
-  -- },
-  -- {
-  --   "nvim-telescope/telescope-fzy-native.nvim",
-  --   run = "make",
-  --   event = "BufRead",
-  -- },
+  -- Non essential
+  {
+    "ray-x/lsp_signature.nvim",
+    config = function() require"lsp_signature".on_attach() end,
+    event = "InsertEnter"
+  },
+  {
+  "blackCauldron7/surround.nvim",
+    config = function()
+      -- vim.g.surround_prefix = "<c-s>"
+      require("surround").setup({mappings_style = "sandwich"})
+    end
+  },
   {
   "kevinhwang91/nvim-bqf",
   event = { "BufRead", "BufNew" },
@@ -233,75 +260,15 @@ lvim.plugins = {
           })
       end,
   },
-  -- {
-  --   "tpope/vim-surround",
-  --   keys = {"c", "d", "y"}
-  -- },
-  -- {"p00f/nvim-ts-rainbow"},
-  -- {
-  --   "windwp/nvim-ts-autotag",
-  --   event = "InsertEnter",
-  -- },
-  -- {
-  --   "JoosepAlviste/nvim-ts-context-commentstring",
-  --   event = "BufRead",
-  -- },
-  -- {"Domino881/kuczy"} --artifact
+  {
+    "windwp/nvim-ts-autotag",
+    event = "InsertEnter",
+  },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    event = "BufRead",
+  },
 }
-
-local nls = require("null-ls")
-nls.config {
-    debounce = 150,
-    save_after_format = false,
-    sources = {
-      nls.builtins.formatting.prettier,
-      -- nls.builtins.formatting.stylua,
-      -- nls.builtins.formatting.goimports,
-      -- nls.builtins.formatting.shfmt.with { extra_args = { "-i", "2", "-ci" } },
-      nls.builtins.diagnostics.eslint,
-      nls.builtins.diagnostics.prettier,
-      -- nls.builtins.diagnostics.shellcheck,
-      -- nls.builtins.diagnostics.luacheck,
-    },
-}
-
-lvim.transparent_window = true
--- O.guifont = "JetBrainsMono Nerd Font"
-vim.g.tokyonight_style = "storm"
-vim.g.tokyonight_italic_functions = true
-vim.g.everforest_background = "hard" -- soft medium hard
--- vim.g.gruvbox_contrast_dark = "soft"
-vim.g.gruvbox_material_background = 'soft'
-vim.g.gruvbox_material_enable_italic = 1
-vim.cmd('let ayucolor="mirage"')
--- vim.g.gruvbox_material_cursor = 'green'
-vim.g.gruvbox_material_palette = 'mix' --'material'`, `'mix'`, `'original'
--- vim.g.neovide_cursor_animation_length=0.05
--- vim.g.neovide_cursor_vfx_mode = "railgun"
-vim.g.neovide_cursor_vfx_mode = "ripple"
-
--- vim.g.indent_blankline_buftype_exclude = {'terminal'}
--- vim.g.indent_blankline_filetype_exclude = {'man', 'help', 'startify', 'dashboard', 'packer', 'neogitstatus', 'markdown'}
--- vim.g.indent_blankline_char = '▏'
--- vim.g.indent_blankline_use_treesitter = true
--- vim.g.indent_blankline_show_trailing_blankline_indent = false
--- vim.g.indent_blankline_show_current_context = true
--- vim.g.indent_blankline_context_patterns = {
---     'class', 'return', 'function', 'method', '^if', '^while', 'jsx_element', '^for', '^object', '^table', 'block',
---     'arguments', 'if_statement', 'else_clause', 'jsx_element', 'jsx_self_closing_element', 'try_statement',
---     'catch_clause', 'import_statement', 'operation_type'
--- }
-
-vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-x>', ':BufferClose<CR>', { noremap = true, silent = true })
-
--- vim.cmd("nnoremap <silent> ca :Lspsaga code_action<CR>")
--- vim.cmd("nnoremap <silent> K :Lspsaga hover_doc<CR>")
--- vim.cmd("nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>")
--- vim.cmd("nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>")
--- vim.cmd("nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
--- vim.cmd("nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
