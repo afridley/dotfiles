@@ -71,7 +71,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap("n", "<Leader>f", ":Telescope find_files<CR>", { noremap = true, silent = true })
 
 -- dashboard
-vim.api.nvim_set_keymap("n", "<Leader>;", ":Dashboard<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>;", ":Dashboard<CR>", { noremap = true, silent = true })
 
 -- Comments
 vim.api.nvim_set_keymap("n", "<leader>/", ":CommentToggle<CR>", { noremap = true, silent = true })
@@ -94,7 +94,7 @@ local mappings = {
   ["/"] = "Comment",
   ["c"] = "Close Buffer",
   ["e"] = "Explorer",
-  ["f"] = "Find File",
+  ["f"] = { "<cmd>Telescope find_files<CR>", "Find File" },
   ["h"] = "No Highlight",
   [";"] = "Dashboard",
   p = {
