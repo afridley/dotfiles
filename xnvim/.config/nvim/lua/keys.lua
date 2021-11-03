@@ -73,3 +73,6 @@ vim.api.nvim_set_keymap('', '<C-q>', ':call QuickFixToggle()<CR>', {noremap = tr
 vim.api.nvim_set_keymap('n', '<S-l>', ':BufferNext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-h>', ':BufferPrevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-x>', ':BufferClose<CR>', { noremap = true, silent = true })
+
+vim.g.vimspector_enable_mappings = 'HUMAN'
+

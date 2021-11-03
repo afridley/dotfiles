@@ -35,9 +35,6 @@ local common_on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
-  client.resolved_capabilities.document_formatting = false
-  client.resolved_capabilities.document_range_formatting = false
-  vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
 
         local ts_utils = require("nvim-lsp-ts-utils")
 
@@ -68,7 +65,7 @@ local common_on_attach = function(client, bufnr)
             enable_formatting = true,
             formatter = "prettier",
             formatter_opts = {},
-
+            
             -- update imports on file move
             update_imports_on_move = true,
             require_confirmation_on_move = true,
@@ -88,6 +85,9 @@ local common_on_attach = function(client, bufnr)
         vim.api.nvim_buf_set_keymap(bufnr, "n", "gx", ":TSLspRenameFile<CR>", opts)
         vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
 
+  client.resolved_capabilities.document_formatting = true
+  client.resolved_capabilities.document_range_formatting = true
+  vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
 end
 
 

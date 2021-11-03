@@ -8,6 +8,10 @@
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use "Pocco81/DAPInstall.nvim"
+  use 'mfussenegger/nvim-dap'
+  use { "hrsh7th/vim-vsnip", event = "InsertEnter" }
+  use { "rafamadriz/friendly-snippets", event = "InsertEnter" }
   use 'nvim-lua/plenary.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'jose-elias-alvarez/nvim-lsp-ts-utils'
@@ -33,7 +37,8 @@ return require('packer').startup(function()
   }
   use {
     'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
+    requires = {'kyazdani42/nvim-web-devicons'},
+    event = "BufWinEnter",
   }
   use {"folke/lsp-colors.nvim", event = "BufRead"}
   use {
@@ -127,7 +132,6 @@ return require('packer').startup(function()
   end
   }
   use 'hrsh7th/nvim-compe'
-  use 'hrsh7th/vim-vsnip'
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',

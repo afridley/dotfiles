@@ -5,6 +5,40 @@ local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
   return
 end
+-- utils.map('n', '<leader>dct', '<cmd>lua require"dap".continue()<CR>')
+-- utils.map('n', '<leader>dsv', '<cmd>lua require"dap".step_over()<CR>')
+-- utils.map('n', '<leader>dsi', '<cmd>lua require"dap".step_into()<CR>')
+-- utils.map('n', '<leader>dso', '<cmd>lua require"dap".step_out()<CR>')
+-- utils.map('n', '<leader>dtb', '<cmd>lua require"dap".toggle_breakpoint()<CR>')
+-- 
+-- utils.map('n', '<leader>dsc', '<cmd>lua require"dap.ui.variables".scopes()<CR>')
+-- utils.map('n', '<leader>dhh', '<cmd>lua require"dap.ui.variables".hover()<CR>')
+-- utils.map('v', '<leader>dhv',
+--           '<cmd>lua require"dap.ui.variables".visual_hover()<CR>')
+-- 
+-- utils.map('n', '<leader>duh', '<cmd>lua require"dap.ui.widgets".hover()<CR>')
+-- utils.map('n', '<leader>duf',
+--           "<cmd>lua local widgets=require'dap.ui.widgets';widgets.centered_float(widgets.scopes)<CR>")
+-- 
+-- utils.map('n', '<leader>dsbr',
+--           '<cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>')
+-- utils.map('n', '<leader>dsbm',
+--           '<cmd>lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>')
+-- utils.map('n', '<leader>dro', '<cmd>lua require"dap".repl.open()<CR>')
+-- utils.map('n', '<leader>drl', '<cmd>lua require"dap".repl.run_last()<CR>')
+-- 
+-- 
+-- -- telescope-dap
+-- utils.map('n', '<leader>dcc',
+--           '<cmd>lua require"telescope".extensions.dap.commands{}<CR>')
+-- utils.map('n', '<leader>dco',
+--           '<cmd>lua require"telescope".extensions.dap.configurations{}<CR>')
+-- utils.map('n', '<leader>dlb',
+--           '<cmd>lua require"telescope".extensions.dap.list_breakpoints{}<CR>')
+-- utils.map('n', '<leader>dv',
+--           '<cmd>lua require"telescope".extensions.dap.variables{}<CR>')
+-- utils.map('n', '<leader>df',
+--           '<cmd>lua require"telescope".extensions.dap.frames{}<CR>')
 
 which_key.setup {
   plugins = {
@@ -178,17 +212,15 @@ local mappings = {
   },
 }
 
--- if O.plugin.trouble.active then
---   mappings["d"] = {
---     name = "Diagnostics",
---     t = { "<cmd>TroubleToggle<cr>", "trouble" },
---     w = { "<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "workspace" },
---     d = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "document" },
---     q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
---     l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
---     r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
---   }
--- end
+  mappings["t"] = {
+    name = "Diagnostics",
+    t = { "<cmd>TroubleToggle<cr>", "trouble" },
+    w = { "<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "workspace" },
+    d = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "document" },
+    q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
+    l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
+    r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+  }
 
   vim.api.nvim_set_keymap("n", "<leader>o", ":SymbolsOutline<CR>", { noremap = true, silent = true })
   mappings["o"] = "Symbols outline"
@@ -221,6 +253,27 @@ local mappings = {
 -- for k, v in pairs(O.user_which_key) do
 --   mappings[k] = v
 -- end
+--
+--  nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
+--     nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
+--     nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
+--     nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
+--     nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
+--     nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+--     nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+--     nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
+--     nnoremap <silent> <leader>dl :lua require'dap'.run_last()<CR>
+
+  mappings["d"] = {
+    name = "Debug",
+    b = {":lua require'dap'.toggle_breakpoint()<CR>", "toggle break"},
+    d = {":lua require'dap'.repl.open()<CR>", "repl open"},
+    r = {":lua require'dap'.run_last()<CR>", "run last"},
+    c = {":lua require'dap'.continue()", "continue"},
+    n = {":lua require'dap'.step_over()", "step over"},
+    i = {":lua require'dap'.step_into()", "step into"},
+    o = {":lua require'dap'.step_out()", "step out"},
+  }
 
 local wk = require "which-key"
 wk.register(mappings, opts)
