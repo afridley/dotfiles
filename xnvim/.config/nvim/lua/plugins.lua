@@ -10,8 +10,14 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use "Pocco81/DAPInstall.nvim"
   use 'mfussenegger/nvim-dap'
-  use { "hrsh7th/vim-vsnip", event = "InsertEnter" }
-  use { "rafamadriz/friendly-snippets", event = "InsertEnter" }
+  -- use { "hrsh7th/vim-vsnip", event = "InsertEnter" }
+  -- use "hrsh7th/nvim-cmp"
+  -- use "L3MON4D3/LuaSnip"
+  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+  use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  use "rafamadriz/friendly-snippets"
   use 'nvim-lua/plenary.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'jose-elias-alvarez/nvim-lsp-ts-utils'
@@ -131,7 +137,7 @@ return require('packer').startup(function()
 	  }
   end
   }
-  use 'hrsh7th/nvim-compe'
+  -- use 'hrsh7th/nvim-compe'
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',

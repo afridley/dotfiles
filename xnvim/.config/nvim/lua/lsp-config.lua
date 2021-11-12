@@ -4,6 +4,10 @@ require("lspconfig")["null-ls"].setup {
   debounce = 100,
 }
 
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local common_on_attach = function(client, bufnr)
@@ -95,6 +99,7 @@ end
 lsp_installer.on_server_ready(function(server)
   local opts = {
     on_attach = common_on_attach,
+    capabilities = capabilities,
   }
 
   server:setup(opts)
