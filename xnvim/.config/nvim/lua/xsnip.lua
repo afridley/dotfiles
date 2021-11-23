@@ -38,7 +38,7 @@ _G.s_tab_complete = function()
     elseif luasnip and luasnip.jumpable(-1) then
         return t("<Plug>luasnip-jump-prev")
     else
-        returnt "<S-Tab>"
+        return "<S-Tab>"
     end
     return ""
 end
