@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "citylights"
 lvim.builtin.treesitter.autotag = {
   enable = true
 }
@@ -220,7 +220,10 @@ lvim.plugins = {
       require("telescope").load_extension "fzf"
     end,
   },
-
+  {"navarasu/onedark.nvim"},
+  -- "agreco/vim-citylights",
+"jordanbrauer/citylights.nvim",
+"tjdevries/colorbuddy.vim",
   -- Non essential
   {
     "ray-x/lsp_signature.nvim",
@@ -264,6 +267,7 @@ lvim.plugins = {
     "windwp/nvim-ts-autotag",
     event = "InsertEnter",
   },
+  -- "TarunDaCoder/citylights.nvim",
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
     event = "BufRead",
