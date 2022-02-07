@@ -49,7 +49,7 @@ alias prof="cd ~/Projects/nestlecareers/docroot/modules/custom/nc_map/frontend"
 alias nroot="cd ~/.local/share/lunarvim && nvim"
 alias nconf="~/.config/lvim && nvim"
 alias mconf="cd ~/dotfiles && nvim"
-alias nvim="lvim"
+# alias nvim="lvim"
 
 alias m="git checkout master"
 alias s="git checkout stable"
