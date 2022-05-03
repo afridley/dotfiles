@@ -11,6 +11,7 @@ import qualified Data.Map as M
 import Data.Monoid
 import System.Exit
 import XMonad
+import XMonad.Actions.SpawnOn
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.Maximize
 import qualified XMonad.StackSet as W
@@ -54,9 +55,20 @@ myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
+-- #  #6790EB #6790EB #e5e5e5 #6790EB #5e81ac #4c566a 5f676a
+-- # Green #44CC99 #118877
+-- # Blue #6790EB #3560a9
+-- # yellow #ffcc55 #cc7722
+-- # red #ff7722 #cc7722
+-- mod = "mod4"
+-- mod1 = "alt"
+-- mod2 = "control"
+-- mainColor = "#ff7722"
+-- mainColorDimmed = "#883322"
+-- mainUnfocusedColor = "#222222"
 myNormalBorderColor = "#333333"
 
-myFocusedBorderColor = "#5599ff"
+myFocusedBorderColor = "#44CC99"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -239,6 +251,10 @@ myStartupHook = do
   spawnOnce "nitrogen --restore &"
   spawnOnce "picom --experimental-backends &"
   spawnOnce "ntpdate ntp.ubuntu.com &"
+  spawnOn "1" "brave"
+  spawnOn "2" "kitty"
+  spawnOn "3" "kitty"
+  spawnOn "3" "slack"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
