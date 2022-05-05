@@ -255,6 +255,7 @@ myStartupHook = do
   spawnOn "2" "kitty"
   spawnOn "3" "kitty"
   spawnOn "3" "slack"
+  spawnOnce "changeThemes.sh"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
