@@ -6,7 +6,8 @@ Config
     position = Top,
     lowerOnStart = True,
     commands =
-      [ Run Date "%a %b %d %H:%M:%S" "date" 10,
+      [ 
+        Run Date "%F (%a) %I:%M %p" "date" 10,
         Run
           Weather
           "KMSP"
@@ -16,8 +17,6 @@ Config
           36000,
         -- Run Com "whoami" [] "" 0,
         -- Run Com "hostname" [] "" 0,
-        -- Run Com "/home/james/.xmonad/wifi.sh" [] "wifi" 10,
-        -- Run Com "/home/james/.xmonad/volume.sh" ["-s"] "volume" 1,
         Run
           DynNetwork
           [ "--template",
