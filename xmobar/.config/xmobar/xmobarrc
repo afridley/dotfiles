@@ -88,5 +88,5 @@ Config
       ],
     sepChar = "%",
     alignSep = "}{",
-    template = ">>= %StdinReader% }{ %multicoretemp% %memory% %dynnetwork% | <fc=#49E20E>%date%</fc> "
+    template = ">>= %StdinReader% }{%KMSP% %multicoretemp% %memory% %dynnetwork% | <fc=#49E20E>%date%</fc> "
   }
