@@ -228,14 +228,7 @@ lvim.plugins = {
 -- {"marreman/tsen-magenta-yellow"}, --would require manual
 {"ayu-theme/ayu-vim"},
 {"fcpg/vim-farout"},
-
-{
-   "blackCauldron7/surround.nvim",
-   config = function()
-   -- vim.g.surround_prefix = "<c-s>"
-   require("surround").setup({mappings_style = "sandwich"})
-end
-},
+{"machakann/vim-sandwich"},
 -- {"lukas-reineke/indent-blankline.nvim"},
 {
 "kevinhwang91/nvim-bqf",
