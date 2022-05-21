@@ -12,6 +12,7 @@ import Data.Monoid
 import System.Exit
 import XMonad
 import XMonad.Actions.SpawnOn
+import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.Maximize
 import qualified XMonad.StackSet as W
@@ -237,7 +238,19 @@ myEventHook = mempty
 -- Perform an arbitrary action on each internal state change or X event.
 -- See the 'XMonad.Hooks.DynamicLog' extension for examples.
 --
-myLogHook = return ()
+myLogHook h c =
+  dynamicLogWithPP $
+    def
+      { ppLayout = wrap "(<fc=#e4b63c>" "</fc>)",
+        -- , ppSort = getSortByXineramaRule  -- Sort left/right screens on the left, non-empty workspaces after those
+        ppTitleSanitize = const "", -- Also about window's title
+        ppVisible = wrap "<fc=#b8473d>(</fc>" "<fc=#b8473d>)</fc>", -- Non-focused (but still visible) screen
+        -- ppCurrent = wrap "<fc=#b8473d>[</fc><fc=#7cac7a>" "</fc><fc=#b8473d>]</fc>", -- Non-focused (but still visible) screen
+        ppCurrent = wrap "<fc=#e4b63c>[</fc><fc=#e4b63c>" "</fc><fc=#e4b63c>]</fc>", -- Non-focused (but still visible) screen
+        ppOutput = \x ->
+          hPutStrLn h x
+            >> hPutStrLn c x
+      }
 
 ------------------------------------------------------------------------
 -- Startup hook
@@ -265,7 +278,11 @@ myStartupHook = do
 main = do
   xmproc0 <- spawnPipe "xmobar -x 0 /home/x2/.config/xmobar/xmobarrc"
   xmproc1 <- spawnPipe "xmobar -x 1 /home/x2/.config/xmobar/xmobarrc"
-  xmonad $ docks defaults
+  xmonad $
+    docks
+      defaults
+        { logHook = myLogHook xmproc0 xmproc1
+        }
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -291,7 +308,17 @@ defaults =
       layoutHook = myLayout,
       manageHook = myManageHook,
       handleEventHook = myEventHook,
-      logHook = myLogHook,
+      -- logHook1 = myLogHook xmproc1,
+      -- logHook =
+      --   dynamicLogWithPP $
+      --     xmobarPP
+      --       { ppOutput = \x ->
+      --           hPutStrLn xmproc0 x
+      --             >> hPutStrLn xmproc1 x,
+      --         ppTitle = xmobarColor xmobarTitleColor "" . shorten 100,
+      --         ppCurrent = xmobarColor xmobarCurrentWorkspaceColor "",
+      --         ppSep = "   "
+      --       },
       startupHook = myStartupHook
     }
 
