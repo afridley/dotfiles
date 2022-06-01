@@ -36,6 +36,7 @@ lvim.leader = "space"
 -- lvim.keys.normal_mode["<C-Up>"] = false
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
+lvim.keys.normal_mode["<S-x>"] = ":bd<CR>"
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -223,7 +224,7 @@ lvim.plugins = {
 	-- {"gruvbox-community/gruvbox"},
 	-- {"mhartington/oceanic-next"},
 	{ "AlessandroYorba/Alduin" },
-	{ "lukas-reineke/indent-blankline.nvim" },
+	-- { "lukas-reineke/indent-blankline.nvim" },
 	{ "franbach/miramare" },
 	{ "savq/melange" },
 	{ "sainnhe/gruvbox-material" },
@@ -270,6 +271,9 @@ lvim.plugins = {
 	{
 		"windwp/nvim-ts-autotag",
 		event = "InsertEnter",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
 	},
 	-- "TarunDaCoder/citylights.nvim",
 	-- {
@@ -283,42 +287,42 @@ lvim.autocommands.custom_groups = {
 	-- { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 	-- {"BufWrite", "*", "eslint_d --fix"}
 }
-vim.g.indent_blankline_buftype_exclude = { "terminal" }
-vim.g.indent_blankline_filetype_exclude = {
-	"man",
-	"help",
-	"startify",
-	"dashboard",
-	"packer",
-	"neogitstatus",
-	"markdown",
-}
-vim.g.indent_blankline_char = "▏"
-vim.g.indent_blankline_use_treesitter = true
-vim.g.indent_blankline_show_trailing_blankline_indent = false
-vim.g.indent_blankline_show_current_context = true
-vim.g.indent_blankline_context_patterns = {
-	"class",
-	"return",
-	"function",
-	"method",
-	"^if",
-	"^while",
-	"jsx_element",
-	"^for",
-	"^object",
-	"^table",
-	"block",
-	"arguments",
-	"if_statement",
-	"else_clause",
-	"jsx_element",
-	"jsx_self_closing_element",
-	"try_statement",
-	"catch_clause",
-	"import_statement",
-	"operation_type",
-}
+-- vim.g.indent_blankline_buftype_exclude = { "terminal" }
+-- vim.g.indent_blankline_filetype_exclude = {
+-- 	"man",
+-- 	"help",
+-- 	"startify",
+-- 	"dashboard",
+-- 	"packer",
+-- 	"neogitstatus",
+-- 	"markdown",
+-- }
+-- vim.g.indent_blankline_char = "▏"
+-- vim.g.indent_blankline_use_treesitter = true
+-- vim.g.indent_blankline_show_trailing_blankline_indent = false
+-- vim.g.indent_blankline_show_current_context = true
+-- vim.g.indent_blankline_context_patterns = {
+-- 	"class",
+-- 	"return",
+-- 	"function",
+-- 	"method",
+-- 	"^if",
+-- 	"^while",
+-- 	"jsx_element",
+-- 	"^for",
+-- 	"^object",
+-- 	"^table",
+-- 	"block",
+-- 	"arguments",
+-- 	"if_statement",
+-- 	"else_clause",
+-- 	"jsx_element",
+-- 	"jsx_self_closing_element",
+-- 	"try_statement",
+-- 	"catch_clause",
+-- 	"import_statement",
+-- 	"operation_type",
+-- }
 
 lvim.transparent_window = true
 vim.g.tokyonight_style = "storm"
@@ -332,4 +336,3 @@ vim.g.gruvbox_material_palette = "mix" --'material'`, `'mix'`, `'original'
 -- vim.g.neovide_cursor_animation_length=0.05
 -- vim.g.neovide_cursor_vfx_mode = "railgun"
 vim.g.neovide_cursor_vfx_mode = "ripple"
-vim.api.nvim_set_keymap("n", "<S-x>", ":BufferClose<CR>", { noremap = true, silent = true })
