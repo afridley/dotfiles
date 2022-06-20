@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "alduin"
+lvim.colorscheme = "gruvbox-material"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -283,10 +283,10 @@ lvim.plugins = {
 }
 vim.cmd(":set clipboard=unnamedplus")
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
-lvim.autocommands.custom_groups = {
-	-- { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
-	-- {"BufWrite", "*", "eslint_d --fix"}
-}
+-- lvim.autocommands.custom_groups = {
+-- { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
+-- {"BufWrite", "*", "eslint_d --fix"}
+-- }
 -- vim.g.indent_blankline_buftype_exclude = { "terminal" }
 -- vim.g.indent_blankline_filetype_exclude = {
 -- 	"man",
