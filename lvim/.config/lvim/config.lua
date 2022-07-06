@@ -238,7 +238,7 @@ lvim.plugins = {
 	{ "frenzyexists/aquarium-vim" },
 	{ "rose-pine/neovim" },
 	{ "rebelot/kanagawa.nvim" },
-	{ "phha/zenburn.nvim" },
+	{ "phha/zenburn.nvim" }, -- needs config
 	{ "shaunsingh/moonlight.nvim" },
 	{ "RRethy/nvim-base16" },
 	-- End themes
@@ -335,14 +335,19 @@ vim.cmd(":set clipboard=unnamedplus")
 -- }
 
 lvim.transparent_window = true
+
+-- Theme palette config
 vim.g.tokyonight_style = "storm"
-vim.g.tokyonight_italic_functions = true
 vim.g.everforest_background = "hard" -- soft medium hard
 vim.g.gruvbox_material_background = "soft"
-vim.g.gruvbox_material_enable_italic = 1
-vim.cmd('let ayucolor="mirage"')
--- vim.g.gruvbox_material_cursor = 'green'
 vim.g.gruvbox_material_palette = "mix" --'material'`, `'mix'`, `'original'
+-- vim.g.gruvbox_material_cursor = 'green'
 -- vim.g.neovide_cursor_animation_length=0.05
 -- vim.g.neovide_cursor_vfx_mode = "railgun"
+vim.cmd('let ayucolor="mirage"')
+
+-- italics
+vim.g.miramare_enable_italic = 1
+vim.g.tokyonight_italic_functions = true
+vim.g.gruvbox_material_enable_italic = 1
 vim.g.neovide_cursor_vfx_mode = "ripple"
