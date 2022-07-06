@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "gruvbox-material"
+lvim.colorscheme = "miramare"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -212,14 +212,6 @@ lvim.plugins = {
 	"jordanbrauer/citylights.nvim",
 	"tjdevries/colorbuddy.vim",
 	-- Non essential
-	{
-		"ray-x/lsp_signature.nvim",
-		config = function()
-			require("lsp_signature").on_attach()
-		end,
-		event = "InsertEnter",
-	},
-
 	{ "sainnhe/everforest" },
 	-- {"gruvbox-community/gruvbox"},
 	-- {"mhartington/oceanic-next"},
@@ -240,8 +232,26 @@ lvim.plugins = {
 	-- {"marreman/tsen-magenta-yellow"}, --would require manual
 	{ "ayu-theme/ayu-vim" },
 	{ "fcpg/vim-farout" },
+	-- NEW
+	{ "marko-cerovac/material.nvim" },
+	{ "rmehri01/onenord.nvim" },
+	{ "frenzyexists/aquarium-vim" },
+	{ "rose-pine/neovim" },
+	{ "rebelot/kanagawa.nvim" },
+	{ "phha/zenburn.nvim" },
+	{ "shaunsingh/moonlight.nvim" },
+	{ "RRethy/nvim-base16" },
+	-- End themes
 	{ "machakann/vim-sandwich" },
 	-- {"lukas-reineke/indent-blankline.nvim"},
+	{
+		"ray-x/lsp_signature.nvim",
+		config = function()
+			require("lsp_signature").on_attach()
+		end,
+		event = "InsertEnter",
+	},
+
 	{
 		"kevinhwang91/nvim-bqf",
 		event = { "BufRead", "BufNew" },
