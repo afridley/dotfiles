@@ -345,7 +345,7 @@ vim.g.indent_blankline_context_patterns = {
 	"operation_type",
 }
 
-lvim.transparent_window = true
+-- lvim.transparent_window = true
 
 -- Theme palette config
 vim.g.tokyonight_style = "storm"
@@ -368,4 +368,7 @@ vim.g.calvera_italic_keywords = true
 vim.g.calvera_italic_functions = true
 vim.g.tokyonight_italic_functions = true
 vim.g.gruvbox_material_enable_italic = true
+
 vim.g.neovide_cursor_vfx_mode = "ripple"
+vim.g.neovide_transparency = 0.8
+vim.opt.guifont = "Space Code:h16"
