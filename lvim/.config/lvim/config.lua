@@ -234,7 +234,18 @@ lvim.plugins = {
 	{ "fcpg/vim-farout" },
 	-- NEW
 	{ "marko-cerovac/material.nvim" },
-	{ "rmehri01/onenord.nvim" },
+	{
+		"rmehri01/onenord.nvim",
+		config = function()
+			require("onenord").setup({
+				styles = {
+					keywords = "italic",
+					functions = "italic",
+					comments = "italic",
+				},
+			})
+		end,
+	},
 	{ "frenzyexists/aquarium-vim" },
 	{ "rose-pine/neovim" },
 	{ "rebelot/kanagawa.nvim" },
@@ -347,7 +358,14 @@ vim.g.gruvbox_material_palette = "mix" --'material'`, `'mix'`, `'original'
 vim.cmd('let ayucolor="mirage"')
 
 -- italics
-vim.g.miramare_enable_italic = 1
+vim.g.miramare_enable_italic = true
+vim.g.moonlight_italic_comments = true
+vim.g.moonlight_italic_keywords = true
+vim.g.moonlight_italic_functions = true
+vim.g.moonlight_italic_variables = false
+vim.g.calvera_italic_comments = true
+vim.g.calvera_italic_keywords = true
+vim.g.calvera_italic_functions = true
 vim.g.tokyonight_italic_functions = true
-vim.g.gruvbox_material_enable_italic = 1
+vim.g.gruvbox_material_enable_italic = true
 vim.g.neovide_cursor_vfx_mode = "ripple"
