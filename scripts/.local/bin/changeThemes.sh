@@ -12,13 +12,13 @@ if [ $DAY == 01 ] && [ $MONTH == 02 ]
 then
   #Feb
   sed -i 's/"onenord"/"calvera"/g' ~/.config/lvim/config.lua
-  sed -i 's/#2d3441/#0c0c1f/g' ~/.config/kitty/kitty.conf
+  sed -i 's/#2d3441/#0d0c1e/g' ~/.config/kitty/kitty.conf
 fi
 if [ $DAY == 01 ] && [ $MONTH == 03 ]
 then
   #Mar
   sed -i 's/"calvera"/"bogster"/g' ~/.config/lvim/config.lua
-  sed -i 's/#1c242b/#161c23/g' ~/.config/kitty/kitty.conf
+  sed -i 's/#0d0c1e/#161c23/g' ~/.config/kitty/kitty.conf
 fi
 if [ $DAY == 01 ] && [ $MONTH == 04 ]
 then
