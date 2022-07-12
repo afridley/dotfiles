@@ -12,6 +12,7 @@ import Data.Monoid
 import System.Exit
 import XMonad
 import XMonad.Actions.SpawnOn
+import XMonad.Layout.Spacing
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.Maximize
@@ -69,7 +70,7 @@ myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 -- mainUnfocusedColor = "#222222"
 myNormalBorderColor = "#333333"
 
-myFocusedBorderColor = "#44CC99"
+myFocusedBorderColor = "#ffcc55"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -183,7 +184,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) =
 -- which denotes layout choice.
 --
 -- myLayout = maximize (Tall 1 (3 / 100) (1 / 2)) ||| tiled ||| Mirror tiled ||| Full
-myLayout = avoidStruts (maximizeWithPadding 0 (Tall 1 (1 / 100) (1 / 2)) ||| tiled ||| Mirror tiled ||| Full)
+myLayout = avoidStruts ( maximizeWithPadding 0 (spacing 25 (Tall 1 (1 / 100) (1 / 2))) ||| tiled ||| Mirror tiled ||| Full)
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled = Tall nmaster delta ratio
