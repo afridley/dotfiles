@@ -14,7 +14,7 @@ android-tools
 android-udev
 ant-gtk-theme
 apparmor
-arc-gtk-theme
+arc-gtk-theme-colorpack
 aspnet-runtime
 audacious
 autoconf
@@ -187,6 +187,7 @@ noto-fonts
 nss-mdns
 ntfs-3g
 ntp
+numix-icon-theme-git
 numlockx
 nvidia-utils
 obsidian
