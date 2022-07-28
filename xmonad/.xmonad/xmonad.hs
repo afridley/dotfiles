@@ -15,6 +15,7 @@ import XMonad.Actions.SpawnOn
 import XMonad.Layout.Spacing
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.Maximize
 import qualified XMonad.StackSet as W
 import XMonad.Util.Run
@@ -68,7 +69,7 @@ myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 -- mainColor = "#ff7722"
 -- mainColorDimmed = "#883322"
 -- mainUnfocusedColor = "#222222"
-myNormalBorderColor = "#333333"
+myNormalBorderColor = "#222222"
 
 myFocusedBorderColor = "#ffcc55"
 
@@ -80,7 +81,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) =
     -- launch a terminal
     [ ((modm, xK_Return), spawn $ XMonad.terminal conf),
       -- launch dmenu
-      ((modm, xK_p), spawn "dmenu_run"),
+      ((modm, xK_p), spawn "dmenu_run -nb '#1e1e1e' -sf '#1e1e1e' -sb '#ffcc55' -nf '#ffcc55'"),
+      -- ((modm, xK_p), spawn "dmenu_run"),
       ((modm, xK_f), withFocused (sendMessage . maximizeRestore)),
       -- launch gmrun
       ((modm .|. shiftMask, xK_p), spawn "gmrun"),
@@ -270,6 +272,8 @@ myStartupHook = do
   spawnOn "3" "kitty"
   spawnOn "3" "slack"
   spawnOnce "changeThemes.sh"
+  spawnOnce "~/.xmonad/autostart.sh"
+
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -277,13 +281,12 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-  xmproc0 <- spawnPipe "xmobar -x 0 /home/x2/.config/xmobar/xmobarrc"
-  xmproc1 <- spawnPipe "xmobar -x 1 /home/x2/.config/xmobar/xmobarrc"
-  xmonad $
-    docks
-      defaults
-        { logHook = myLogHook xmproc0 xmproc1
-        }
+  -- xmproc0 <- spawnPipe "xmobar -x 0 /home/x2/.config/xmobar/xmobarrc"
+  -- xmproc1 <- spawnPipe "xmobar -x 1 /home/x2/.config/xmobar/xmobarrc"
+  xmonad $ docks $ ewmh
+        defaults
+          -- { logHook = myLogHook xmproc0 xmproc1
+          -- }
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
