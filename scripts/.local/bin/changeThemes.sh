@@ -46,6 +46,7 @@ then
 fi
 if [ $DAY == 01 ] && [ $MONTH == 08 ]
 then
+  # original zenburn background was 3f3f3f
   #Aug
   sed -i 's/"miramare"/"zenburn"/g' ~/.config/lvim/config.lua
   sed -i 's/#2A2426/#3f3f3f/g' ~/.config/kitty/kitty.conf

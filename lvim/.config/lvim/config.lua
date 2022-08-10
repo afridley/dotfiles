@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "miramare"
+lvim.colorscheme = "zenburn"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -346,7 +346,7 @@ vim.g.indent_blankline_context_patterns = {
 	"operation_type",
 }
 
--- lvim.transparent_window = true
+lvim.transparent_window = true
 
 -- Theme palette config
 vim.g.tokyonight_style = "storm"
