@@ -9,7 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "WorkNotes/Plan for Treatment tools fe.md",
+            "file": "WorkNotes/Treatment Tools/FE structure.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "d90b6c7f9963dfe5",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "WorkNotes/Treatment Tools/Plan for Treatment tools fe.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 566.5
   },
   "right": {
     "id": "a27a7821d3bb9fab",
@@ -69,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "WorkNotes/Plan for Treatment tools fe.md",
+                "file": "WorkNotes/Treatment Tools/FE structure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "WorkNotes/Plan for Treatment tools fe.md"
+                "file": "WorkNotes/Treatment Tools/FE structure.md"
               }
             }
           }
@@ -95,19 +107,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "cdc5b16c0108befd",
   "lastOpenFiles": [
+    "WorkNotes/Treatment Tools/Plan for Treatment tools fe.md",
+    "WorkNotes/Need from api.md",
+    "WorkNotes/Treatment Tools/FE structure.md",
     "WorkNotes/Yougov meeting.md",
-    "WorkNotes/Plan for Treatment tools fe.md",
     "Docker/Docker loading and exporting.md",
     "Dev/Freeze Chrom.md",
     "Linux/Setup dotnet linux.md",
     "Linux/linux app password.md",
     "temp code.md",
-    "Temp.md",
-    "sign-in.md",
-    "ffds.md"
+    "Temp.md"
   ]
 }
