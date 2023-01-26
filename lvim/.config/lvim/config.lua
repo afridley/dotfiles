@@ -40,6 +40,9 @@ lvim.keys.normal_mode["<S-x>"] = ":bd<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 local _, actions = pcall(require, "telescope.actions")
@@ -121,6 +124,7 @@ lvim.builtin.treesitter.ensure_installed = {
 	"rust",
 	"java",
 	"yaml",
+	"graphql",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
