@@ -43,6 +43,25 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 local _, actions = pcall(require, "telescope.actions")
+lvim.builtin.telescope = {
+	active = true,
+	defaults = {
+		layout_strategy = "horizontal",
+		path_display = { truncate = 2 },
+	},
+}
+-- Show previewer when searching git files with default <leader>f
+lvim.builtin.which_key.mappings["f"] = {
+	require("lvim.core.telescope.custom-finders").find_project_files,
+	"Find File",
+}
+-- Show previewer when searching buffers with <leader>bf
+lvim.builtin.which_key.mappings.b.f = {
+	"<cmd>Telescope buffers<cr>",
+	"Find",
+}
+lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
+lvim.builtin.telescope.defaults.borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
 lvim.builtin.telescope.defaults.mappings = {
 	-- for input mode
 	i = {
@@ -73,9 +92,16 @@ lvim.builtin.which_key.mappings["t"] = {
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 -- lvim.builtin.dashboard.active = true
-lvim.builtin.notify.active = true
+-- lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
+-- lvim.builtin.telescope = {
+-- 	active = true,
+-- 	defaults = {
+-- 		layout_strategy = "horizontal",
+-- 		path_display = { truncate = 2 },
+-- 	},
+-- }
 -- lvim.builtin.nvimtree.show_icons.git = 0
 -- vim.opt.tabstop = 4
 -- vim.opt.shiftwidth = 4
@@ -203,11 +229,11 @@ lvim.plugins = {
 			})
 		end,
 	},
-	{
-		"nvim-telescope/telescope-fzy-native.nvim",
-		run = "make",
-		event = "BufRead",
-	},
+	-- {
+	-- 	"nvim-telescope/telescope-fzy-native.nvim",
+	-- 	run = "make",
+	-- 	event = "BufRead",
+	-- },
 	-- {
 	--   "nvim-telescope/telescope-fzf-native.nvim",
 	--   run = "make",
