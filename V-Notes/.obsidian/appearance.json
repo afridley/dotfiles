@@ -2,5 +2,8 @@
   "baseFontSize": 18,
   "translucency": true,
   "theme": "obsidian",
-  "cssTheme": "Primary"
+  "cssTheme": "Reverie",
+  "accentColor": "",
+  "interfaceFontFamily": "Inter",
+  "textFontFamily": "Inter"
 }

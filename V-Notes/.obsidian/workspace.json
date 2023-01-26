@@ -1,0 +1,131 @@
+{
+  "main": {
+    "id": "231c4b1c13528551",
+    "type": "split",
+    "children": [
+      {
+        "id": "fe76cbec6d9ff6b1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4d4ec342bdd3ee2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dev/Freeze Chrom.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b615f0ce855e82ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "0df8394f249261d3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "68bd122f870e34df",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "57d75c89ab16c3a4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 287.5
+  },
+  "right": {
+    "id": "a27a7821d3bb9fab",
+    "type": "split",
+    "children": [
+      {
+        "id": "b58c50e2b9338337",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a4a3f6413ff59132",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Dev/Freeze Chrom.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "88c32172c1e4a9ab",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Dev/Freeze Chrom.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "c4d4ec342bdd3ee2",
+  "lastOpenFiles": [
+    "Dev/Reassign theme object.md",
+    "Mayo/4. Getting started - Setup.md",
+    "Mayo/5. Interacting with new Api's.md",
+    "Mayo/3. Next js setup.md",
+    "Mayo/2. Deployment.md",
+    "Mayo/1. Introduction Mental health advisor.md",
+    "output/1. Introduction Mental health advisor.md",
+    "output/2. Deployment.md",
+    "Untitled.canvas",
+    "WorkNotes/Treatment Tools/Plan for Treatment tools fe.md"
+  ]
+}
