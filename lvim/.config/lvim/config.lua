@@ -217,8 +217,6 @@ lvim.plugins = {
 		cmd = "TroubleToggle",
 	},
 	{ "p00f/nvim-ts-rainbow" },
-
-	{ "p00f/nvim-ts-rainbow" },
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
@@ -233,11 +231,11 @@ lvim.plugins = {
 			})
 		end,
 	},
-	-- {
-	-- 	"nvim-telescope/telescope-fzy-native.nvim",
-	-- 	run = "make",
-	-- 	event = "BufRead",
-	-- },
+	{
+		"nvim-telescope/telescope-fzy-native.nvim",
+		run = "make",
+		event = "BufRead",
+	},
 	-- {
 	--   "nvim-telescope/telescope-fzf-native.nvim",
 	--   run = "make",
@@ -293,15 +291,21 @@ lvim.plugins = {
 	{ "RRethy/nvim-base16" },
 	-- End themes
 	{ "machakann/vim-sandwich" },
-	{ "lukas-reineke/indent-blankline.nvim" },
+	-- { "lukas-reineke/indent-blankline.nvim" },
+	-- {
+	-- 	"ray-x/lsp_signature.nvim",
+	-- 	config = function()
+	-- 		require("lsp_signature").on_attach()
+	-- 	end,
+	-- 	event = "InsertEnter",
+	-- },
 	{
 		"ray-x/lsp_signature.nvim",
+		event = "BufRead",
 		config = function()
 			require("lsp_signature").on_attach()
 		end,
-		event = "InsertEnter",
 	},
-
 	{
 		"kevinhwang91/nvim-bqf",
 		event = { "BufRead", "BufNew" },
@@ -335,11 +339,31 @@ lvim.plugins = {
 			require("nvim-ts-autotag").setup()
 		end,
 	},
-	-- "TarunDaCoder/citylights.nvim",
-	-- {
-	--   "JoosepAlviste/nvim-ts-context-commentstring",
-	--   event = "BufRead",
-	-- },
+	{
+		"karb94/neoscroll.nvim",
+		event = "WinScrolled",
+		config = function()
+			require("neoscroll").setup({
+				-- All these keys will be mapped to their corresponding default scrolling animation
+				mappings = { "<C-u>", "<C-d>", "<C-b>", "<C-f>", "<C-y>", "<C-e>", "zt", "zz", "zb" },
+				hide_cursor = true, -- Hide cursor while scrolling
+				stop_eof = true, -- Stop at <EOF> when scrolling downwards
+				use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
+				respect_scrolloff = false, -- Stop scrolling when the cursor reaches the scrolloff margin of the file
+				cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
+				easing_function = nil, -- Default easing function
+				pre_hook = nil, -- Function to run before the scrolling animation starts
+				post_hook = nil, -- Function to run after the scrolling animation ends
+			})
+		end,
+	},
+	{
+		"folke/todo-comments.nvim",
+		event = "BufRead",
+		config = function()
+			require("todo-comments").setup()
+		end,
+	},
 }
 vim.cmd(":set clipboard=unnamedplus")
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -347,8 +371,7 @@ vim.cmd(":set clipboard=unnamedplus")
 -- { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- {"BufWrite", "*", "eslint_d --fix"}
 -- }
-vim.g.indent_blankline_buftype_exclude = { "terminal" }
-vim.g.indent_blankline_filetype_exclude = {
+lvim.builtin.indentlines.options.filetype_exclude = {
 	"man",
 	"help",
 	"startify",
@@ -357,32 +380,47 @@ vim.g.indent_blankline_filetype_exclude = {
 	"neogitstatus",
 	"markdown",
 }
-vim.g.indent_blankline_char = "▏"
-vim.g.indent_blankline_use_treesitter = true
-vim.g.indent_blankline_show_trailing_blankline_indent = false
-vim.g.indent_blankline_show_current_context = true
-vim.g.indent_blankline_context_patterns = {
-	"class",
-	"return",
-	"function",
-	"method",
-	"^if",
-	"^while",
-	"jsx_element",
-	"^for",
-	"^object",
-	"^table",
-	"block",
-	"arguments",
-	"if_statement",
-	"else_clause",
-	"jsx_element",
-	"jsx_self_closing_element",
-	"try_statement",
-	"catch_clause",
-	"import_statement",
-	"operation_type",
-}
+lvim.builtin.indentlines.options.buftype_exclude = { "terminal" }
+lvim.builtin.indentlines.options.show_current_context = true
+lvim.builtin.indentlines.options.use_treesitter = true
+
+------- If lvim removes blankline again
+-- vim.g.indent_blankline_buftype_exclude = { "terminal" }
+-- vim.g.indent_blankline_filetype_exclude = {
+-- 	"man",
+-- 	"help",
+-- 	"startify",
+-- 	"dashboard",
+-- 	"packer",
+-- 	"neogitstatus",
+-- 	"markdown",
+-- }
+-- vim.g.indent_blankline_char = "▏"
+-- vim.g.indent_blankline_use_treesitter = true
+-- vim.g.indent_blankline_show_trailing_blankline_indent = false
+-- vim.g.indent_blankline_show_current_context = true
+-- vim.g.indent_blankline_context_patterns = {
+-- 	"class",
+-- 	"return",
+-- 	"function",
+-- 	"method",
+-- 	"^if",
+-- 	"^while",
+-- 	"jsx_element",
+-- 	"^for",
+-- 	"^object",
+-- 	"^table",
+-- 	"block",
+-- 	"arguments",
+-- 	"if_statement",
+-- 	"else_clause",
+-- 	"jsx_element",
+-- 	"jsx_self_closing_element",
+-- 	"try_statement",
+-- 	"catch_clause",
+-- 	"import_statement",
+-- 	"operation_type",
+-- }
 
 lvim.transparent_window = true
 
