@@ -1,7 +1,7 @@
 # background_opacity 0.7
 # background_opacity 0.10
-background_opacity 0.80
-#background_opacity 0.90
+# background_opacity 0.80
+background_opacity 0.90
 # background_opacity 0.95
 # background_opacity 1
 font_size 16
@@ -16,7 +16,7 @@ bold_italic_font auto
 disable_ligatures never
 hide_window_decorations titlebar-only
 
-background #2d3441
+background #0d0c1e
 
 # # gruvbox
 # # ----------------

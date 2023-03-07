@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "calvera"
+lvim.colorscheme = "bogster"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -274,7 +274,7 @@ lvim.plugins = {
 	{
 		"rmehri01/onenord.nvim",
 		-- config = function()
-		-- 	require("calvera").setup({
+		-- 	require("bogster").setup({
 		-- 		styles = {
 		-- 			keywords = "italic",
 		-- 			functions = "italic",
