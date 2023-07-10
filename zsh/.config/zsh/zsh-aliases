@@ -44,11 +44,11 @@ alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
 
 alias mach_java_mode="export SDKMAN_DIR="/home/chris/.sdkman" && [[ -s "/home/chris/.sdkman/bin/sdkman-init.sh" ]] && source "/home/chris/.sdkman/bin/sdkman-init.sh""
 
-alias pro="cd ~/Projects/nestlecareers && nvim"
-alias prof="cd ~/Projects/nestlecareers/docroot/modules/custom/nc_map/frontend"
-alias nroot="cd ~/.local/share/lunarvim && nvim"
-alias nconf="~/.config/lvim && nvim"
-alias mconf="cd ~/dotfiles && nvim"
+alias pup="cd ~/Projects/pup && lvim"
+alias pcom="cd ~/Projects/gatsby-h20-purina/gatsby && lvim"
+alias nroot="cd ~/.local/share/lunarvim && lvim"
+alias nconf="~/.config/lvim && lvim"
+alias mconf="cd ~/dotfiles && lvim"
 alias lvim="/Users/andrew.fridley/.local/bin/lvim"
 # alias nvim="lvim"
 
