@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "bogster"
+lvim.colorscheme = "miramare"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -97,6 +97,7 @@ lvim.builtin.which_key.mappings["t"] = {
 -- lvim.builtin.dashboard.active = true
 -- lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
+lvim.builtin.terminal.open_mapping = "<c-t>"
 lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.telescope = {
 -- 	active = true,
@@ -154,7 +155,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- end
 
 local graphql_lsp_opts = {
-	filetypes = { "graphql", "typescriptreact", "javascriptreact", "typescript" },
+	filetypes = { "graphql", "typescriptreact", "javascriptreact", "typescript", "javascript" },
 }
 
 require("lvim.lsp.manager").setup("graphql", graphql_lsp_opts)
@@ -274,7 +275,7 @@ lvim.plugins = {
 	{
 		"rmehri01/onenord.nvim",
 		-- config = function()
-		-- 	require("bogster").setup({
+		-- 	require("everforest").setup({
 		-- 		styles = {
 		-- 			keywords = "italic",
 		-- 			functions = "italic",
