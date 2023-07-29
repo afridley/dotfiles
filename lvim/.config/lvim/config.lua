@@ -158,6 +158,21 @@ local graphql_lsp_opts = {
 	filetypes = { "graphql", "typescriptreact", "javascriptreact", "typescript", "javascript" },
 }
 
+local tailwind_opts = {
+	settings = {
+		tailwindCSS = {
+			experimental = {
+				classRegex = {
+					"tv\\(([^)]*)\\)",
+					"[\"'`]([^\"'`]*).*?[\"'`]",
+				},
+			},
+		},
+	},
+}
+
+require("lvim.lsp.manager").setup("tailwindcss", tailwind_opts)
+
 require("lvim.lsp.manager").setup("graphql", graphql_lsp_opts)
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)

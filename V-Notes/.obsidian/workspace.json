@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "dec4828e1911d333",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "WorkNotes/Yougov meeting.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Purina/Amplify/Creds.md",
+                "file": "WorkNotes/Yougov meeting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Purina/Amplify/Creds.md"
+                "file": "WorkNotes/Yougov meeting.md"
               }
             }
           }
@@ -136,8 +148,24 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "c6def36df5f4ff45",
+  "active": "dec4828e1911d333",
   "lastOpenFiles": [
+    "WorkNotes/What Im working on.md",
+    "WorkNotes/Todo.md",
+    "WorkNotes/Need from api.md",
+    "WorkNotes/List of possible event_params or other.md",
+    "WorkNotes/ga ref.md",
+    "WorkNotes/BV.md",
+    "WorkNotes/Brians review.md",
+    "Dev/ssr notes.md",
+    "Dev/Track focus.md",
+    "Dev/scrollIntoView().md",
+    "Dev/Reassign theme object.md",
+    "Dev/Obsidian.md",
+    "Dev/lintStaged.md",
+    "Dev/Generics.md",
+    "Dev/Event bublin.md",
+    "Dev/Did mount effect. dont run useEffect 1st time.md",
     "Dev/Freeze Chrom.md",
     "Purina/Amplify/Creds.md",
     "Purina/tickets.md",
@@ -148,22 +176,6 @@
     "Purina/Amplify/Amplify.md",
     "Purina/Amplify/Possible login for node.js.md",
     "Purina/Amplify",
-    "Purina/Notes translatiosn.md",
-    "Purina/Analytics.md",
-    "Purina/White Paper.md",
-    "Dev/Did mount effect. dont run useEffect 1st time.md",
-    "Dev/Event bublin.md",
-    "Dev/Generics.md",
-    "Dev/lintStaged.md",
-    "Dev/Obsidian.md",
-    "Dev/Reassign theme object.md",
-    "Dev/scrollIntoView().md",
-    "Dev/ssr notes.md",
-    "Dev/Track focus.md",
-    "Docker/Docker loading and exporting.md",
-    "Linux/Setup dotnet linux.md",
-    "Linux/linux app password.md",
-    "Mayo/5. Interacting with new Api's.md",
-    "Mayo/4. Getting started - Setup.md"
+    "Purina/Notes translatiosn.md"
   ]
 }
