@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "gruvbox-material"
+lvim.colorscheme = "zenburn"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -157,6 +157,21 @@ lvim.builtin.treesitter.highlight.enabled = true
 local graphql_lsp_opts = {
 	filetypes = { "graphql", "typescriptreact", "javascriptreact", "typescript", "javascript" },
 }
+
+local tailwind_opts = {
+	settings = {
+		tailwindCSS = {
+			experimental = {
+				classRegex = {
+					"tv\\(([^)]*)\\)",
+					"[\"'`]([^\"'`]*).*?[\"'`]",
+				},
+			},
+		},
+	},
+}
+
+require("lvim.lsp.manager").setup("tailwindcss", tailwind_opts)
 
 require("lvim.lsp.manager").setup("graphql", graphql_lsp_opts)
 

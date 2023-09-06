@@ -55,7 +55,7 @@ if [ $MONTH == 09 ]
 then
   #Sept
   sed -i'' -e 's/"zenburn"/"kanagawa"/g' ~/.config/lvim/config.lua
-  sed -i'' -e 's/#3F3f3f/#1f1f28/g' ~/.config/kitty/kitty.conf
+  sed -i'' -e 's/#3f3f3f/#1f1f28/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 10 ]
 then

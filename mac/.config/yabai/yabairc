@@ -17,6 +17,8 @@
 # active_window_border_color   0xff8659cf # purp
 # active_window_border_color   0xff3366ff # blue
 # active_window_border_color   0xffFfc53c # yellow
+# active_window_border_color   0xffE42810 # red
+
 yabai -m config                                 \
     mouse_follows_focus          off            \
     focus_follows_mouse          off            \
@@ -32,7 +34,7 @@ yabai -m config                                 \
     normal_window_opacity        0.90           \
     window_opacity               off            \
     insert_feedback_color        0xffd75f5f     \
-    active_window_border_color   0xffFfc53c     \
+    active_window_border_color   0xffE42810     \
     normal_window_border_color   0xff555555     \
     window_border_width          3              \
     window_border_radius         12             \
