@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "zenburn"
+lvim.colorscheme = "kanagawa"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -438,7 +438,7 @@ lvim.builtin.indentlines.options.use_treesitter = true
 -- 	"operation_type",
 -- }
 
-lvim.transparent_window = true
+-- lvim.transparent_window = true
 
 -- Theme palette config
 vim.g.tokyonight_style = "storm"
@@ -463,5 +463,5 @@ vim.g.tokyonight_italic_functions = true
 vim.g.gruvbox_material_enable_italic = true
 
 vim.g.neovide_cursor_vfx_mode = "ripple"
--- vim.g.neovide_transparency = 0.8
+vim.g.neovide_transparency = 0.8
 vim.opt.guifont = "Space Code:h18"
