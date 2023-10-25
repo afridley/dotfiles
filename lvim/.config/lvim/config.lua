@@ -229,6 +229,13 @@ linters.setup({
 lvim.plugins = {
 	{ "folke/tokyonight.nvim" },
 	{
+		"nvimdev/lspsaga.nvim",
+		after = "nvim-lspconfig",
+		config = function()
+			require("lspsaga").setup({})
+		end,
+	},
+	{
 		"folke/trouble.nvim",
 		cmd = "TroubleToggle",
 	},

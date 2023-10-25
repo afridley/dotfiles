@@ -1,0 +1,115 @@
+// Change Theme
+    [
+        {
+            "caption": "Change Theme: Cognition",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Monokai Plus (Cognition).sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Machine",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Monokai Plus (Machine).sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Octagon",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Monokai Plus (Octagon).sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Monokai",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Monokai Plus.sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Ristretto",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Monokai Plus (Ristretto).sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Spectrum",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Monokai Plus (Spectrum).sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Palenight",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Merge Palenight.sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Palenight cs",
+            "command": "set_preference",
+            "args": {
+                "setting": "color_scheme",
+                "value": "Meetio Palenight.sublime-color-scheme"
+            },
+        },
+        {
+            "caption": "Change Theme: Darker",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Merge Darker.sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Darker cs",
+            "command": "set_preference",
+            "args": {
+                "setting": "color_scheme",
+                "value": "Meetio Darker.sublime-color-scheme"
+            },
+        },
+        {
+            "caption": "Change Theme: Deepocean",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Merge Deepocean.sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Deepocean cs",
+            "command": "set_preference",
+            "args": {
+                "setting": "color_scheme",
+                "value": "Meetio Deepocean.sublime-color-scheme"
+            },
+        },
+        {
+            "caption": "Change Theme: Lighter",
+            "command": "set_preference",
+            "args": {
+                "setting": "theme",
+                "value": "Merge Lighter.sublime-theme"
+            },
+        },
+        {
+            "caption": "Change Theme: Lighter cs",
+            "command": "set_preference",
+            "args": {
+                "setting": "color_scheme",
+                "value": "Meetio Lighter.sublime-color-scheme"
+            },
+        },
+    ]
