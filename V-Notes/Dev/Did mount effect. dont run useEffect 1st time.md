@@ -1,4 +1,4 @@
-```
+```ts
 const useDidMountEffect = (func, deps) => {
   const didMount = useRef(false);
 

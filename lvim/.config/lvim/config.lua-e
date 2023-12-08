@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "kanagawa"
+lvim.colorscheme = "melange"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -229,6 +229,13 @@ linters.setup({
 lvim.plugins = {
 	{ "folke/tokyonight.nvim" },
 	{
+		"nvimdev/lspsaga.nvim",
+		after = "nvim-lspconfig",
+		config = function()
+			require("lspsaga").setup({})
+		end,
+	},
+	{
 		"folke/trouble.nvim",
 		cmd = "TroubleToggle",
 	},
@@ -438,7 +445,7 @@ lvim.builtin.indentlines.options.use_treesitter = true
 -- 	"operation_type",
 -- }
 
--- lvim.transparent_window = true
+lvim.transparent_window = true
 
 -- Theme palette config
 vim.g.tokyonight_style = "storm"

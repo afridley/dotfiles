@@ -45,3 +45,33 @@ testXor = { title: "t", icon: "i", click: true, component: {} } //error,both set
 Basically _either_ `component` _or_ `click` can be set, the other should [never 1](https://www.typescriptlang.org/docs/handbook/basic-types.html#never) be added at the same time. TS can make a [discriminated union type](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions) out of `MenuItemXor`, which corresponds to `XOR`.
 
 This `XOR` condition for `MenuItemXor` is not possible with [accepted answer](https://stackoverflow.com/a/40510700/5669456).
+
+
+
+
+## Very useful what ive done
+```ts
+export enum TokenTypes {
+  id = 'id',
+  access = 'access',
+  refresh = 'refresh'
+}
+
+type OType<T> =
+  T extends TokenTypes.id ? ICognitoIDUser :
+  T extends TokenTypes.access ? {[key: string]: any} :
+  any
+
+export async function getToken<T extends TokenTypes>(type: T): Promise<OType<T>> {
+  const session = await Auth.currentSession()
+  if (type === TokenTypes.id) return session.getIdToken().payload as OType<T>
+  if (type === TokenTypes.access) return session.getAccessToken().payload as OType<T>
+  return session.getRefreshToken() as OType<T>
+}
+
+
+```
+Used below
+```ts
+getToken(TokenTypes.id).then((res) => getPets(res?.ansiraId))
+```

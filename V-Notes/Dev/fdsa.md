@@ -1,4 +1,4 @@
-```
+```ts
 import { Button, Heading } from 'pds-ui'
 import React from 'react'
 
