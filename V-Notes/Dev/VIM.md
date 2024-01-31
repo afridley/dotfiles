@@ -1,0 +1,2 @@
+- <C-6> go back and forth between buffers
+-  <C-o> Go back to previous buffer in time 
