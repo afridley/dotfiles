@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "onenord"
+lvim.colorscheme = "calvera"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -445,7 +445,7 @@ lvim.builtin.indentlines.options.use_treesitter = true
 -- 	"operation_type",
 -- }
 
-lvim.transparent_window = true
+lvim.transparent_window = false
 
 -- Theme palette config
 vim.g.tokyonight_style = "storm"

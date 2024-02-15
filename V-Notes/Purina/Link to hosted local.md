@@ -1,0 +1,1 @@
+https://login-dev.purina.com/oauth2/authorize?redirect_uri=http%3A%2F%2Flocalhost:3000%2F&response_type=code&client_id=3h2t0pbb0sc1viet8slbstlcob&identity_provider=COGNITO&scope=phone%20email%20profile%20openid%20aws.cognito.signin.user.admin
