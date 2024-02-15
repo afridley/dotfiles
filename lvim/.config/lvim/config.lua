@@ -239,7 +239,7 @@ lvim.plugins = {
 		"folke/trouble.nvim",
 		cmd = "TroubleToggle",
 	},
-	{ "p00f/nvim-ts-rainbow" },
+	-- { "p00f/nvim-ts-rainbow" },
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
@@ -256,7 +256,7 @@ lvim.plugins = {
 	},
 	{
 		"nvim-telescope/telescope-fzy-native.nvim",
-		run = "make",
+		build = "make",
 		event = "BufRead",
 	},
 	-- {
