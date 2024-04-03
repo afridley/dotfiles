@@ -37,26 +37,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Purina/Purina Universal Profile - UAT Introduction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b9e3df41b5ccbff7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Dev/Untitled 1.md",
+                "file": "Temp/Untitled.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "image",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dev/Untitled 1.md",
+                "file": "Temp/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dev/Untitled 1.md"
+                "file": "Temp/Untitled.md"
               }
             }
           }
@@ -160,21 +148,26 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "b9e3df41b5ccbff7",
+  "active": "7fd020fa9176f5f4",
   "lastOpenFiles": [
-    "Dev/ssr notes.md",
-    "Dev/Untitled 1.md",
     "Temp/Temp.md",
+    "Temp/Untitled.md",
+    "Dev/Code for Image processing.md",
+    "Temp/icons mdi.md",
+    "Purina/Purina Universal Profile - UAT Introduction.md",
+    "Dev/ssr notes.md",
     "Linux/Possible new color themes.md",
+    "Dev/VIM.md",
+    "Dev/scrollIntoView().md",
+    "Dev/Reassign theme object.md",
+    "Dev/AWS Hub events.md",
+    "Dev/React Hook Form.md",
+    "Dev/Untitled 1.md",
     "Purina/Link to hosted local.md",
     "Temp",
-    "Dev/VIM.md",
-    "Dev/AWS Hub events.md",
     "Dev/Untitled.md",
     "Dev/Ultimate regex to find tailwind classes.md",
     "Dev/Track focus.md",
-    "Dev/scrollIntoView().md",
-    "Dev/Reassign theme object.md",
     "Dev/Plan for script.md",
     "Dev/Obsidian.md",
     "Dev/Nextjs.md",
@@ -184,11 +177,6 @@
     "Dev/Freeze Chrom.md",
     "Dev/fdsa.md",
     "Docker/Docker loading and exporting.md",
-    "Linux/linux app password.md",
-    "Linux/Setup dotnet linux.md",
-    "Purina/Purina Universal Profile - UAT Introduction.md",
-    "Dev/Event bublin.md",
-    "Dev/Did mount effect. dont run useEffect 1st time.md",
     "Purina/Amplify"
   ]
 }

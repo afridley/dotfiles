@@ -1,0 +1,24 @@
+* mdiCalendar
+* mdiClose
+* mdiEarth
+* mdiFacebook
+* mdiInstagram
+* mdiTwitter
+* mdiYoutube
+* mdiMagnify
+* mdiChevronDown
+* mdiOpenInNew
+* mdiArrowLeft
+* mdiMapMarker
+* mdiInformationOutline
+* mdiMenu
+* mdiAlertCircleOutline
+* mdiAlertDecagramOutline
+* mdiAutorenew
+* mdiPackedVariantClosed 000000---------
+* mdiTrendingDown
+* mdiArrowLeft
+* mdiArrowRight
+* mdiCheckCircleOutline
+* mdiInformation
+* mdiFilterOutline

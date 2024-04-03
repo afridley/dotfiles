@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "calvera"
+lvim.colorscheme = "everforest"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -190,6 +190,10 @@ formatters.setup({
 	--   filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
 	-- },
 	{
+		command = "prettier",
+		filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+	},
+	{
 		command = "stylua",
 		filetypes = { "lua" },
 	},
@@ -228,6 +232,15 @@ linters.setup({
 -- Additional Plugins
 lvim.plugins = {
 	{ "folke/tokyonight.nvim" },
+	{
+		"rose-pine/neovim",
+		config = function()
+			require("rose-pine").setup({
+				variant = "moon",
+				-- dark_varient = "moon",
+			})
+		end,
+	},
 	{
 		"nvimdev/lspsaga.nvim",
 		after = "nvim-lspconfig",
@@ -307,7 +320,7 @@ lvim.plugins = {
 		-- end,
 	},
 	{ "frenzyexists/aquarium-vim" },
-	{ "rose-pine/neovim" },
+	-- { "rose-pine/neovim" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "phha/zenburn.nvim" }, -- needs config
 	{ "shaunsingh/moonlight.nvim" },
@@ -445,7 +458,7 @@ lvim.builtin.indentlines.options.use_treesitter = true
 -- 	"operation_type",
 -- }
 
-lvim.transparent_window = false
+lvim.transparent_window = true
 
 -- Theme palette config
 vim.g.tokyonight_style = "storm"

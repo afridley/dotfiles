@@ -16,7 +16,7 @@ bold_italic_font auto
 disable_ligatures never
 hide_window_decorations titlebar-only
 
-background #2b3339
+background #161c23
 
 # # gruvbox
 # # ----------------

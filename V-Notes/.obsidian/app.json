@@ -7,5 +7,6 @@
   "vimMode": true,
   "showLineNumber": true,
   "spellcheck": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "tabSize": 2
 }

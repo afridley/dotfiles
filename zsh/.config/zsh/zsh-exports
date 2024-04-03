@@ -8,6 +8,7 @@ export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
+export PATH=${HOME}/Library/Python/3.9/lib/python/site-packages:$PATH
 export GOPATH=$HOME/.local/share/go
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
