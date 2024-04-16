@@ -91,6 +91,15 @@ lvim.builtin.which_key.mappings["t"] = {
 	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
 }
+lvim.builtin.which_key.mappings["a"] = {
+	name = "Actions",
+	a = { "<cmd>Lspsaga code_action<cr>", "code action" },
+	d = { "<cmd>Lspsaga peek_definition<cr>", "peek Definitions" },
+	D = { "<cmd>Lspsaga peek_type_definition<cr>", "peek Type definitions" },
+	o = { "<cmd>Lspsaga outline<cr>", "outline" },
+	r = { "<cmd>Lspsaga rename<cr>", "replace" },
+	f = { "<cmd>Lspsaga finder<cr>", "Find r and i" },
+}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -231,6 +240,23 @@ linters.setup({
 
 -- Additional Plugins
 lvim.plugins = {
+	{
+		"smoka7/multicursors.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"smoka7/hydra.nvim",
+		},
+		opts = {},
+		cmd = { "MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor" },
+		keys = {
+			{
+				mode = { "v", "n" },
+				"<Leader>m",
+				"<cmd>MCstart<cr>",
+				desc = "Create a selection for selected text or word under the cursor",
+			},
+		},
+	},
 	{ "folke/tokyonight.nvim" },
 	{
 		"rose-pine/neovim",
@@ -243,11 +269,21 @@ lvim.plugins = {
 	},
 	{
 		"nvimdev/lspsaga.nvim",
-		after = "nvim-lspconfig",
 		config = function()
 			require("lspsaga").setup({})
 		end,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter", -- optional
+			"nvim-tree/nvim-web-devicons", -- optional
+		},
 	},
+	-- {
+	-- 	"nvimdev/lspsaga.nvim",
+	-- 	after = "nvim-lspconfig",
+	-- 	config = function()
+	-- 		require("lspsaga").setup({})
+	-- 	end,
+	-- },
 	{
 		"folke/trouble.nvim",
 		cmd = "TroubleToggle",
