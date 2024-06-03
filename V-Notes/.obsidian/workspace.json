@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dev/Working terser for component libraries.md",
+                "file": "Purina/welcom/Final Sku.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "postm",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dev/Working terser for component libraries.md",
+                "file": "Purina/welcom/Final Sku.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dev/Working terser for component libraries.md"
+                "file": "Purina/welcom/Final Sku.md"
               }
             }
           }
@@ -162,16 +162,20 @@
   },
   "active": "a1321f398bce7c82",
   "lastOpenFiles": [
+    "Temp/Untitled 1.md",
+    "Purina/welcom/Final Sku.md",
+    "Purina/welcom",
+    "Temp/Temp.md",
     "Postmessages.md",
+    "Linux/NVIM.md",
+    "Linux/Possible new color themes.md",
+    "Temp/Untitled.md",
+    "Dev/ssr notes.md",
     "Dev/Working terser for component libraries.md",
     "Purina/Testing Notes for welcome.md",
-    "Dev/ssr notes.md",
-    "Temp/Temp.md",
-    "Temp/Untitled.md",
     "Dev/Code for Image processing.md",
     "Temp/icons mdi.md",
     "Purina/Purina Universal Profile - UAT Introduction.md",
-    "Linux/Possible new color themes.md",
     "Dev/VIM.md",
     "Dev/scrollIntoView().md",
     "Dev/Reassign theme object.md",
@@ -186,9 +190,6 @@
     "Dev/Plan for script.md",
     "Dev/Obsidian.md",
     "Dev/Nextjs.md",
-    "Dev/lintStaged.md",
-    "Dev/How to use enums with keys.md",
-    "Dev/Generics.md",
     "Purina/Amplify"
   ]
 }

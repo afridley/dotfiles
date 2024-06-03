@@ -1,9 +1,9 @@
 inspect serverside
-```
+```ts
 console.log(require('util').inspect(theObject, { showHidden: false, depth: null, colors: true }))
 ```
 
-```
+```ts
 export const updateUserPassword = async (ansiraId: string, { currentPW, newPW, sourceCode }: UpdatePasswordPayload) => {
   console.log({ ansiraId }, { currentPW }, { newPW }, { sourceCode })
   const res = await sstService.updateUserPasswordSstServicesV1UsersUserIdPasswordPost(ansiraId, { currentPW, newPW, sourceCode })
@@ -13,7 +13,7 @@ export const updateUserPassword = async (ansiraId: string, { currentPW, newPW, s
 
 ```
 
-```
+```ts
       const user = await Auth.currentSession()
       const idToken = user.getIdToken().payload as ICognitoIDUser
       console.log('trying')

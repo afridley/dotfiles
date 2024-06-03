@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "everforest"
+lvim.colorscheme = "darkearth"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -22,7 +22,7 @@ lvim.builtin.treesitter.autotag = {
 	enable = true,
 }
 lvim.builtin.treesitter.rainbow = {
-	enable = false,
+	enable = true,
 }
 lvim.builtin.treesitter.context_commentstring = {
 	enable = true,
@@ -288,7 +288,7 @@ lvim.plugins = {
 		"folke/trouble.nvim",
 		cmd = "TroubleToggle",
 	},
-	-- { "p00f/nvim-ts-rainbow" },
+	-- { "HiPhish/nvim-ts-rainbow2" },
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
@@ -316,6 +316,19 @@ lvim.plugins = {
 	--     require("telescope").load_extension "fzf"
 	--   end,
 	-- },
+	-- {
+	-- 	"xero/miasma.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme miasma")
+	-- 	end,
+	-- },
+	-- This is inspired by miasma but better
+	{
+		"ptdewey/darkearth-nvim",
+		priority = 1000,
+	},
 	{ "navarasu/onedark.nvim" },
 	-- "agreco/vim-citylights",
 	"jordanbrauer/citylights.nvim",
@@ -346,7 +359,7 @@ lvim.plugins = {
 	{
 		"rmehri01/onenord.nvim",
 		-- config = function()
-		-- 	require("everforest").setup({
+		-- 	require("gruvbox-material").setup({
 		-- 		styles = {
 		-- 			keywords = "italic",
 		-- 			functions = "italic",

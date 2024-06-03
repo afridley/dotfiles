@@ -15,8 +15,11 @@ italic_font      auto
 bold_italic_font auto
 disable_ligatures never
 hide_window_decorations titlebar-only
+repaint_delay 8
+input_delay 0
+sync_to_monitor no
 
-background #2b3339
+background #1c1c1c
 
 # # gruvbox
 # # ----------------

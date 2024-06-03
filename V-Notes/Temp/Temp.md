@@ -74,3 +74,20 @@ Check
 ---
 
 Cookie Policy
+
+
+---
+was set
+* Shipping
+* Delivery
+* Billing
+
+
+
+
+## Today
+* Analytics
+* env's
+## Tomorrow
+* Final UPC
+* Remaining
