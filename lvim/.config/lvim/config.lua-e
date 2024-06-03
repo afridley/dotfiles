@@ -359,7 +359,7 @@ lvim.plugins = {
 	{
 		"rmehri01/onenord.nvim",
 		-- config = function()
-		-- 	require("alduin").setup({
+		-- 	require("gruvbox-material").setup({
 		-- 		styles = {
 		-- 			keywords = "italic",
 		-- 			functions = "italic",

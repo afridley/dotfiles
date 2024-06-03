@@ -29,13 +29,13 @@ fi
 if [ $MONTH == 05 ]
 then
   #May
-  sed -i'' -e 's/"everforest"/"alduin"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  sed -i'' -e 's/"everforest"/"darkearth"/g' ~/dotfiles/lvim/.config/lvim/config.lua
   sed -i'' -e 's/#2b3339/#1c1c1c/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 06 ]
 then
   #Jun
-  sed -i'' -e 's/"alduin"/"gruvbox-material"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  sed -i'' -e 's/"darkearth"/"gruvbox-material"/g' ~/dotfiles/lvim/.config/lvim/config.lua
   sed -i'' -e 's/#1c1c1c/#32302F/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 07 ]
