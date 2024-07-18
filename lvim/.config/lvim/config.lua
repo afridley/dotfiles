@@ -11,16 +11,16 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "gruvbox-material"
+lvim.colorscheme = "miramare"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
 --         theme = "onedark"
 --     }
 -- }
-lvim.builtin.treesitter.autotag = {
-	enable = true,
-}
+-- lvim.builtin.treesitter.autotag = {
+-- 	enable = true,
+-- }
 lvim.builtin.treesitter.rainbow = {
 	enable = true,
 }
@@ -86,7 +86,7 @@ lvim.builtin.which_key.mappings["t"] = {
 	name = "+Trouble",
 	r = { "<cmd>Trouble lsp_references<cr>", "References" },
 	f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-	d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
+	d = { "<cmd>Trouble diagnostics<cr>", "Diagnostics" },
 	q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
 	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
@@ -286,7 +286,40 @@ lvim.plugins = {
 	-- },
 	{
 		"folke/trouble.nvim",
-		cmd = "TroubleToggle",
+		opts = {}, -- for default options, refer to the configuration section for custom setup.
+		cmd = "Trouble",
+		-- keys = {
+		--   {
+		--     "<leader>xx",
+		--     "<cmd>Trouble diagnostics toggle<cr>",
+		--     desc = "Diagnostics (Trouble)",
+		--   },
+		--   {
+		--     "<leader>xX",
+		--     "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+		--     desc = "Buffer Diagnostics (Trouble)",
+		--   },
+		--   {
+		--     "<leader>cs",
+		--     "<cmd>Trouble symbols toggle focus=false<cr>",
+		--     desc = "Symbols (Trouble)",
+		--   },
+		--   {
+		--     "<leader>cl",
+		--     "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+		--     desc = "LSP Definitions / references / ... (Trouble)",
+		--   },
+		--   {
+		--     "<leader>xL",
+		--     "<cmd>Trouble loclist toggle<cr>",
+		--     desc = "Location List (Trouble)",
+		--   },
+		--   {
+		--     "<leader>xQ",
+		--     "<cmd>Trouble qflist toggle<cr>",
+		--     desc = "Quickfix List (Trouble)",
+		--   },
+		-- },
 	},
 	-- { "HiPhish/nvim-ts-rainbow2" },
 	{
@@ -303,19 +336,19 @@ lvim.plugins = {
 			})
 		end,
 	},
-	{
-		"nvim-telescope/telescope-fzy-native.nvim",
-		build = "make",
-		event = "BufRead",
-	},
 	-- {
-	--   "nvim-telescope/telescope-fzf-native.nvim",
-	--   run = "make",
-	--   after = "telescope.nvim",
-	--   config = function()
-	--     require("telescope").load_extension "fzf"
-	--   end,
+	-- 	"nvim-telescope/telescope-fzy-native.nvim",
+	-- 	build = "make",
+	-- 	event = "BufRead",
 	-- },
+	{
+		"nvim-telescope/telescope-fzf-native.nvim",
+		build = "make",
+		after = "telescope.nvim",
+		config = function()
+			require("telescope").load_extension("fzf")
+		end,
+	},
 	-- {
 	-- 	"xero/miasma.nvim",
 	-- 	lazy = false,
@@ -359,7 +392,7 @@ lvim.plugins = {
 	{
 		"rmehri01/onenord.nvim",
 		-- config = function()
-		-- 	require("gruvbox-material").setup({
+		-- 	require("miramare").setup({
 		-- 		styles = {
 		-- 			keywords = "italic",
 		-- 			functions = "italic",

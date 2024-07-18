@@ -2,8 +2,8 @@
   "baseFontSize": 18,
   "translucency": true,
   "theme": "obsidian",
-  "cssTheme": "Everforest",
-  "accentColor": "#7043db",
+  "cssTheme": "Primary",
+  "accentColor": "#db4343",
   "interfaceFontFamily": "Inter",
   "textFontFamily": "Inter"
 }
