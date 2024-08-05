@@ -4,74 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "eb8c441ba6767930",
+        "id": "a0e189430a26a381",
         "type": "tabs",
         "children": [
           {
-            "id": "6d780e88ce5908be",
+            "id": "9d435b65e212b54e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dev/Analytics Jacking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a8e13877e66c899c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Purina/NOTES/Main Dump.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7fd020fa9176f5f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Temp/Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a1321f398bce7c82",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Purina/welcom/Final Sku.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cf9f6eed635d0836",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
-            }
-          },
-          {
-            "id": "b529827cfc41a6cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/NVIM.md",
+                "file": "Purina/NOTES/August.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nvim",
+                "query": "typescript",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dev/Analytics Jacking.md",
+                "file": "Purina/NOTES/August.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dev/Analytics Jacking.md"
+                "file": "Purina/NOTES/August.md"
               }
             }
           }
@@ -182,16 +124,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6d780e88ce5908be",
+  "active": "9d435b65e212b54e",
   "lastOpenFiles": [
+    "Purina/NOTES/July.md",
+    "Purina/NOTES/August.md",
+    "Linux/Possible new color themes.md",
+    "Conditional types.md",
     "Purina/NOTES/Main Dump.md",
-    "Purina/welcom/Final Sku.md",
-    "Purina/NOTES",
     "Linux/NVIM.md",
-    "Dev/ssr notes.md",
-    "Dev/Analytics Jacking.md",
-    "Dev/Plan for script.md",
+    "Purina/welcom/Final Sku.md",
     "Temp/Untitled.md",
+    "Dev/Analytics Jacking.md",
+    "Purina/NOTES",
+    "Dev/ssr notes.md",
+    "Dev/Plan for script.md",
     "Dev/VIM.md",
     "Dev/Nextjs.md",
     "Dev/lintStaged.md",
@@ -199,7 +145,6 @@
     "Purina/welcom",
     "Temp/Temp.md",
     "Postmessages.md",
-    "Linux/Possible new color themes.md",
     "Dev/Working terser for component libraries.md",
     "Purina/Testing Notes for welcome.md",
     "Dev/Code for Image processing.md",
@@ -209,10 +154,7 @@
     "Dev/Reassign theme object.md",
     "Dev/AWS Hub events.md",
     "Dev/React Hook Form.md",
-    "Dev/Untitled 1.md",
-    "Purina/Link to hosted local.md",
     "Temp",
-    "Dev/Untitled.md",
     "Purina/Amplify"
   ]
 }
