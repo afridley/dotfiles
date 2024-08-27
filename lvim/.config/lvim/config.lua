@@ -199,18 +199,17 @@ formatters.setup({
 	--   filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
 	-- },
 	{
+		command = "eslint_d",
+		-- args = {"--fix-to-stdout"},
+		filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+	},
+	{
 		command = "prettier",
 		filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
 	},
 	{
 		command = "stylua",
 		filetypes = { "lua" },
-	},
-
-	{
-		command = "eslint_d",
-		-- args = {"--fix-to-stdout"},
-		filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
 	},
 })
 
@@ -240,6 +239,24 @@ linters.setup({
 
 -- Additional Plugins
 lvim.plugins = {
+	{
+		"nvim-pack/nvim-spectre",
+		event = "BufRead",
+		config = function()
+			require("spectre").setup({
+				replace_engine = {
+					["sed"] = {
+						cmd = "sed",
+						args = {
+							"-i",
+							"",
+							"-E",
+						},
+					},
+				},
+			})
+		end,
+	},
 	{
 		"smoka7/multicursors.nvim",
 		event = "VeryLazy",
@@ -321,6 +338,7 @@ lvim.plugins = {
 		--   },
 		-- },
 	},
+	{ url = "https://gitlab.com/HiPhish/rainbow-delimiters.nvim" },
 	-- { "HiPhish/nvim-ts-rainbow2" },
 	{
 		"norcalli/nvim-colorizer.lua",
@@ -358,6 +376,7 @@ lvim.plugins = {
 	-- 	end,
 	-- },
 	-- This is inspired by miasma but better
+	{ url = "https://github.com/github/copilot.vim" },
 	{
 		"ptdewey/darkearth-nvim",
 		priority = 1000,

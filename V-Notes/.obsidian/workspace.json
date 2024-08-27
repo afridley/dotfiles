@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Purina/NOTES/August.md",
+                "file": "Purina/NOTES/AXE.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "aa83793dbad478ac",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +59,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "typescript",
+                "query": "focus",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Purina/NOTES/August.md",
+                "file": "Purina/NOTES/AXE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Purina/NOTES/August.md"
+                "file": "Purina/NOTES/AXE.md"
               }
             }
           }
@@ -124,22 +135,28 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9d435b65e212b54e",
+  "active": "aa83793dbad478ac",
   "lastOpenFiles": [
-    "Purina/NOTES/July.md",
+    "Dev/Track focus.md",
+    "Purina/NOTES/AXE.md",
     "Purina/NOTES/August.md",
+    "Dev/Analytics Jacking and Memory Profiling.md",
+    "Dev/AWS Hub events.md",
+    "Dev/Code for Image processing.md",
+    "Dev/Did mount effect. dont run useEffect 1st time.md",
+    "Dev/Event bublin.md",
+    "Dev/Nextjs.md",
+    "Purina/NOTES/July.md",
     "Linux/Possible new color themes.md",
     "Conditional types.md",
     "Purina/NOTES/Main Dump.md",
     "Linux/NVIM.md",
     "Purina/welcom/Final Sku.md",
     "Temp/Untitled.md",
-    "Dev/Analytics Jacking.md",
     "Purina/NOTES",
     "Dev/ssr notes.md",
     "Dev/Plan for script.md",
     "Dev/VIM.md",
-    "Dev/Nextjs.md",
     "Dev/lintStaged.md",
     "Temp/Untitled 1.md",
     "Purina/welcom",
@@ -147,13 +164,7 @@
     "Postmessages.md",
     "Dev/Working terser for component libraries.md",
     "Purina/Testing Notes for welcome.md",
-    "Dev/Code for Image processing.md",
     "Temp/icons mdi.md",
-    "Purina/Purina Universal Profile - UAT Introduction.md",
-    "Dev/scrollIntoView().md",
-    "Dev/Reassign theme object.md",
-    "Dev/AWS Hub events.md",
-    "Dev/React Hook Form.md",
     "Temp",
     "Purina/Amplify"
   ]
