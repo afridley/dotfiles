@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Purina/NOTES/AXE.md",
+                "file": "Purina/NOTES/Untitled.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "aa83793dbad478ac",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Purina/NOTES/AXE.md",
+                "file": "Purina/NOTES/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Purina/NOTES/AXE.md"
+                "file": "Purina/NOTES/Untitled.md"
               }
             }
           }
@@ -135,10 +124,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "aa83793dbad478ac",
+  "active": "9d435b65e212b54e",
   "lastOpenFiles": [
-    "Dev/Track focus.md",
     "Purina/NOTES/AXE.md",
+    "Purina/NOTES/Untitled.md",
+    "Dev/Track focus.md",
     "Purina/NOTES/August.md",
     "Dev/Analytics Jacking and Memory Profiling.md",
     "Dev/AWS Hub events.md",
@@ -164,7 +154,6 @@
     "Postmessages.md",
     "Dev/Working terser for component libraries.md",
     "Purina/Testing Notes for welcome.md",
-    "Temp/icons mdi.md",
     "Temp",
     "Purina/Amplify"
   ]
