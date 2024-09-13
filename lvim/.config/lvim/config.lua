@@ -40,6 +40,7 @@ lvim.keys.normal_mode["<S-x>"] = ":bd<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
+vim.keymap.set({ "v" }, "<Leader>wv", require("react-extract").extract_to_current_file)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -255,6 +256,12 @@ lvim.plugins = {
 					},
 				},
 			})
+		end,
+	},
+	{
+		"napmn/react-extract.nvim",
+		config = function()
+			require("react-extract").setup()
 		end,
 	},
 	{

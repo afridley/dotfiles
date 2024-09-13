@@ -75,3 +75,55 @@ Used below
 ```ts
 getToken(TokenTypes.id).then((res) => getPets(res?.ansiraId))
 ```
+
+
+Used to get both () => () <div> </div> and <Eleemtn />
+https://react.dev/reference/react/isValidElement
+
+```ts
+'use client';
+
+import React from 'react';
+import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
+import { CheckIcon } from '@radix-ui/react-icons';
+import { Label } from '@radix-ui/react-label';
+
+export interface ICheckbox extends CheckboxPrimitive.CheckboxProps {
+  label: string | React.FC | React.ReactNode;
+  id: string;
+  position?: 'top' | 'center';
+}
+
+// eslint-disable-next-line
+export const Checkbox = React.forwardRef<any, ICheckbox>(
+  // eslint-disable-next-line
+  ({ label: CustomLabel, id, position = 'center', ...props }, ref) => {
+    return (
+      <div className={`pds-flex ${position === 'center' ? 'pds-items-center' : 'pds-items-start'}`}>
+        <CheckboxPrimitive.Root
+          className="pds-flex pds-h-[24px] pds-w-[24px] pds-min-w-[24px] pds-items-center pds-justify-center pds-rounded-[2px] pds-border-thick pds-border-neutral pds-bg-primary-text pds-outline-none pds-outline-offset-2 aria-checked:pds-bg-neutral data-[error=true]:pds-outline-error"
+          {...props}
+          id={id}
+        >
+          <CheckboxPrimitive.Indicator className="pds-text-primary-text">
+            <CheckIcon />
+          </CheckboxPrimitive.Indicator>
+        </CheckboxPrimitive.Root>
+        <Label className="pds-pl-[15px] pds-text-[15px] pds-leading-none" htmlFor={id}>
+          {(typeof CustomLabel === 'string' || typeof CustomLabel === 'object') && CustomLabel}
+          {typeof CustomLabel === 'function' && <CustomLabel />}
+        </Label>
+      </div>
+    );
+  },
+);
+
+```
+
+```ts
+        <Label className="pds-pl-[15px] pds-text-[15px] pds-leading-none" htmlFor={id}>
+          {(typeof CustomLabel === 'string' || typeof CustomLabel === 'object') && CustomLabel}
+          {typeof CustomLabel === 'function' && <CustomLabel />}
+        </Label>
+
+```

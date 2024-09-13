@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Purina/NOTES/Untitled.md",
+                "file": "Typescript/Conditional types.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ff9c55608010bfb4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dev/Local npm testing.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "focus",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Purina/NOTES/Untitled.md",
+                "file": "Dev/Local npm testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Purina/NOTES/Untitled.md"
+                "file": "Dev/Local npm testing.md"
               }
             }
           }
@@ -124,10 +137,17 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9d435b65e212b54e",
+  "active": "ff9c55608010bfb4",
   "lastOpenFiles": [
-    "Purina/NOTES/AXE.md",
+    "Typescript/Conditional types.md",
+    "Dev/Local npm testing.md",
+    "Iphone code 1415.md",
+    "Typescript",
+    "Dev/Nextjs.md",
+    "Mayo/3. Next js setup.md",
+    "Linux/NVIM.md",
     "Purina/NOTES/Untitled.md",
+    "Purina/NOTES/AXE.md",
     "Dev/Track focus.md",
     "Purina/NOTES/August.md",
     "Dev/Analytics Jacking and Memory Profiling.md",
@@ -135,12 +155,9 @@
     "Dev/Code for Image processing.md",
     "Dev/Did mount effect. dont run useEffect 1st time.md",
     "Dev/Event bublin.md",
-    "Dev/Nextjs.md",
     "Purina/NOTES/July.md",
     "Linux/Possible new color themes.md",
-    "Conditional types.md",
     "Purina/NOTES/Main Dump.md",
-    "Linux/NVIM.md",
     "Purina/welcom/Final Sku.md",
     "Temp/Untitled.md",
     "Purina/NOTES",
@@ -151,9 +168,6 @@
     "Temp/Untitled 1.md",
     "Purina/welcom",
     "Temp/Temp.md",
-    "Postmessages.md",
-    "Dev/Working terser for component libraries.md",
-    "Purina/Testing Notes for welcome.md",
     "Temp",
     "Purina/Amplify"
   ]
