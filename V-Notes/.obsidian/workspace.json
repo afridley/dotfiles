@@ -20,13 +20,25 @@
             }
           },
           {
+            "id": "6d490302f49a1c23",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sublime Merge themes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "ff9c55608010bfb4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dev/Local npm testing.md",
-                "mode": "source",
+                "file": "Dev/Reassign theme object.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -61,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "themes",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dev/Local npm testing.md",
+                "file": "Sublime Merge themes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dev/Local npm testing.md"
+                "file": "Sublime Merge themes.md"
               }
             }
           }
@@ -137,9 +149,16 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ff9c55608010bfb4",
+  "active": "6d490302f49a1c23",
   "lastOpenFiles": [
+    "Sublime Merge",
     "Typescript/Conditional types.md",
+    "Sublime Merge themes.md",
+    "Dev/Reassign theme object.md",
+    "Linux/Possible new color themes.md",
+    "Dev/useAuth.md",
+    "Dev/Analytics Jacking and Memory Profiling.md",
+    "Purina/NOTES/Oct.md",
     "Dev/Local npm testing.md",
     "Iphone code 1415.md",
     "Typescript",
@@ -150,24 +169,17 @@
     "Purina/NOTES/AXE.md",
     "Dev/Track focus.md",
     "Purina/NOTES/August.md",
-    "Dev/Analytics Jacking and Memory Profiling.md",
     "Dev/AWS Hub events.md",
     "Dev/Code for Image processing.md",
     "Dev/Did mount effect. dont run useEffect 1st time.md",
     "Dev/Event bublin.md",
     "Purina/NOTES/July.md",
-    "Linux/Possible new color themes.md",
     "Purina/NOTES/Main Dump.md",
     "Purina/welcom/Final Sku.md",
     "Temp/Untitled.md",
     "Purina/NOTES",
     "Dev/ssr notes.md",
-    "Dev/Plan for script.md",
-    "Dev/VIM.md",
-    "Dev/lintStaged.md",
-    "Temp/Untitled 1.md",
     "Purina/welcom",
-    "Temp/Temp.md",
     "Temp",
     "Purina/Amplify"
   ]

@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "zenburn"
+lvim.colorscheme = "kanagawa"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -40,6 +40,7 @@ lvim.keys.normal_mode["<S-x>"] = ":bd<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
+vim.keymap.set({ "v" }, "<Leader>wv", require("react-extract").extract_to_current_file)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -258,6 +259,12 @@ lvim.plugins = {
 		end,
 	},
 	{
+		"napmn/react-extract.nvim",
+		config = function()
+			require("react-extract").setup()
+		end,
+	},
+	{
 		"smoka7/multicursors.nvim",
 		event = "VeryLazy",
 		dependencies = {
@@ -411,7 +418,7 @@ lvim.plugins = {
 	{
 		"rmehri01/onenord.nvim",
 		-- config = function()
-		-- 	require("zenburn").setup({
+		-- 	require("kanagawa").setup({
 		-- 		styles = {
 		-- 			keywords = "italic",
 		-- 			functions = "italic",
