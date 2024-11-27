@@ -32,6 +32,30 @@
             }
           },
           {
+            "id": "91d08ead13a3acf1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Drupal.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "71eb4e6ee9586c04",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dev/PUTEST TOKEN.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "ff9c55608010bfb4",
             "type": "leaf",
             "state": {
@@ -44,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -73,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "themes",
+                "query": "setTim",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sublime Merge themes.md",
+                "file": "Dev/PUTEST TOKEN.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sublime Merge themes.md"
+                "file": "Dev/PUTEST TOKEN.md"
               }
             }
           }
@@ -149,11 +173,16 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6d490302f49a1c23",
+  "active": "71eb4e6ee9586c04",
   "lastOpenFiles": [
+    "Dev/Freeze Chrom.md",
+    "Dev/PUTEST TOKEN.md",
+    "WorkNotes/Todo.md",
+    "bitbucket terraform.md",
+    "Drupal.md",
+    "Sublime Merge themes.md",
     "Sublime Merge",
     "Typescript/Conditional types.md",
-    "Sublime Merge themes.md",
     "Dev/Reassign theme object.md",
     "Linux/Possible new color themes.md",
     "Dev/useAuth.md",
@@ -174,11 +203,7 @@
     "Dev/Did mount effect. dont run useEffect 1st time.md",
     "Dev/Event bublin.md",
     "Purina/NOTES/July.md",
-    "Purina/NOTES/Main Dump.md",
-    "Purina/welcom/Final Sku.md",
-    "Temp/Untitled.md",
     "Purina/NOTES",
-    "Dev/ssr notes.md",
     "Purina/welcom",
     "Temp",
     "Purina/Amplify"

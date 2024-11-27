@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "melange"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -22,7 +22,7 @@ lvim.colorscheme = "tokyonight"
 -- 	enable = true,
 -- }
 lvim.builtin.treesitter.rainbow = {
-	enable = true,
+	enable = false,
 }
 lvim.builtin.treesitter.context_commentstring = {
 	enable = true,
@@ -345,7 +345,7 @@ lvim.plugins = {
 		--   },
 		-- },
 	},
-	{ url = "https://gitlab.com/HiPhish/rainbow-delimiters.nvim" },
+	-- { url = "https://gitlab.com/HiPhish/rainbow-delimiters.nvim" },
 	-- { "HiPhish/nvim-ts-rainbow2" },
 	{
 		"norcalli/nvim-colorizer.lua",
@@ -418,7 +418,7 @@ lvim.plugins = {
 	{
 		"rmehri01/onenord.nvim",
 		-- config = function()
-		-- 	require("tokyonight").setup({
+		-- 	require("melange").setup({
 		-- 		styles = {
 		-- 			keywords = "italic",
 		-- 			functions = "italic",
