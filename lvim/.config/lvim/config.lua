@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "melange"
+lvim.colorscheme = "moonlight"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -418,7 +418,7 @@ lvim.plugins = {
 	{
 		"rmehri01/onenord.nvim",
 		-- config = function()
-		-- 	require("melange").setup({
+		-- 	require("moonlight").setup({
 		-- 		styles = {
 		-- 			keywords = "italic",
 		-- 			functions = "italic",

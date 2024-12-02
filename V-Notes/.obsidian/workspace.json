@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dev/PUTEST TOKEN.md",
+                "file": "Linux/Possible new color themes.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -97,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "setTim",
+                "query": "themes",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -114,7 +114,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -134,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dev/PUTEST TOKEN.md",
+                "file": "Dev/Reassign theme object.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dev/PUTEST TOKEN.md"
+                "file": "Dev/Reassign theme object.md"
               }
             }
           }
@@ -173,22 +174,22 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "71eb4e6ee9586c04",
+  "active": "ff9c55608010bfb4",
   "lastOpenFiles": [
-    "Dev/Freeze Chrom.md",
-    "Dev/PUTEST TOKEN.md",
-    "WorkNotes/Todo.md",
-    "bitbucket terraform.md",
-    "Drupal.md",
-    "Sublime Merge themes.md",
-    "Sublime Merge",
-    "Typescript/Conditional types.md",
-    "Dev/Reassign theme object.md",
     "Linux/Possible new color themes.md",
     "Dev/useAuth.md",
     "Dev/Analytics Jacking and Memory Profiling.md",
     "Purina/NOTES/Oct.md",
     "Dev/Local npm testing.md",
+    "Typescript/Conditional types.md",
+    "Dev/Reassign theme object.md",
+    "Drupal.md",
+    "Sublime Merge themes.md",
+    "Dev/PUTEST TOKEN.md",
+    "Dev/Freeze Chrom.md",
+    "WorkNotes/Todo.md",
+    "bitbucket terraform.md",
+    "Sublime Merge",
     "Iphone code 1415.md",
     "Typescript",
     "Dev/Nextjs.md",
