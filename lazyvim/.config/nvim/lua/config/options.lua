@@ -29,3 +29,23 @@ vim.g.gruvbox_material_enable_italic = true
 vim.g.neovide_cursor_vfx_mode = "ripple"
 vim.g.neovide_transparency = 0.8
 vim.opt.guifont = "Space Code:h18"
+-- local graphql_lsp_opts = {
+-- 	filetypes = { "graphql", "typescriptreact", "javascriptreact", "typescript", "javascript" },
+-- }
+--
+-- local tailwind_opts = {
+-- 	settings = {
+-- 		tailwindCSS = {
+-- 			experimental = {
+-- 				classRegex = {
+-- 					"tv\\(([^)]*)\\)",
+-- 					"[\"'`]([^\"'`]*).*?[\"'`]",
+-- 				},
+-- 			},
+-- 		},
+-- 	},
+-- }
+--
+-- require("lvim.lsp.manager").setup("tailwindcss", tailwind_opts)
+--
+-- require("lvim.lsp.manager").setup("graphql", graphql_lsp_opts)
