@@ -1,9 +1,12 @@
 {
   "baseFontSize": 18,
-  "translucency": true,
+  "translucency": false,
   "theme": "obsidian",
-  "cssTheme": "Primary",
-  "accentColor": "#db4343",
+  "cssTheme": "Reverie",
+  "accentColor": "#4391db",
   "interfaceFontFamily": "Inter",
-  "textFontFamily": "Inter"
+  "textFontFamily": "Inter",
+  "nativeMenus": true,
+  "showViewHeader": true,
+  "showRibbon": true
 }

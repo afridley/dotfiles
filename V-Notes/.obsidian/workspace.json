@@ -4,71 +4,62 @@
     "type": "split",
     "children": [
       {
-        "id": "a0e189430a26a381",
+        "id": "4be220c1f9a5aa53",
         "type": "tabs",
         "children": [
           {
-            "id": "9d435b65e212b54e",
+            "id": "3330f66bed95ee2e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Typescript/Conditional types.md",
+                "file": "Temp/TODO.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "TODO"
             }
           },
           {
-            "id": "6d490302f49a1c23",
+            "id": "c2b1db02fc356010",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sublime Merge themes.md",
+                "file": "Drupal filtering.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Drupal filtering"
             }
           },
           {
-            "id": "91d08ead13a3acf1",
+            "id": "5a3623374286a4ad",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "Drupal.md",
-                "mode": "source",
-                "source": false
-              }
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
             }
           },
           {
-            "id": "71eb4e6ee9586c04",
+            "id": "f58e37396bbcfa6f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "Linux/Possible new color themes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ff9c55608010bfb4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Dev/Reassign theme object.md",
-                "mode": "preview",
-                "source": false
-              }
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -88,7 +79,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -97,13 +90,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "themes",
+                "query": "environment",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -111,7 +106,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ],
@@ -135,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dev/Reassign theme object.md",
+                "file": "Temp/TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +140,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for TODO"
             }
           },
           {
@@ -152,8 +151,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dev/Reassign theme object.md"
-              }
+                "file": "Temp/TODO.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of TODO"
             }
           }
         ],
@@ -174,17 +175,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ff9c55608010bfb4",
+  "active": "3330f66bed95ee2e",
   "lastOpenFiles": [
+    "Drupal filtering.md",
+    "Temp/TODO.md",
+    "Typescript/Assertions.md",
+    "Typescript/Intersting type for def.md",
+    "Dev/Code for Image processing.md",
+    "Drupal.md",
+    "Temp/pantheon down.md",
+    "Typescript/Conditional types.md",
     "Linux/Possible new color themes.md",
+    "Sublime Merge themes.md",
+    "Dev/Reassign theme object.md",
     "Dev/useAuth.md",
     "Dev/Analytics Jacking and Memory Profiling.md",
     "Purina/NOTES/Oct.md",
     "Dev/Local npm testing.md",
-    "Typescript/Conditional types.md",
-    "Dev/Reassign theme object.md",
-    "Drupal.md",
-    "Sublime Merge themes.md",
     "Dev/PUTEST TOKEN.md",
     "Dev/Freeze Chrom.md",
     "WorkNotes/Todo.md",
@@ -198,12 +205,6 @@
     "Purina/NOTES/Untitled.md",
     "Purina/NOTES/AXE.md",
     "Dev/Track focus.md",
-    "Purina/NOTES/August.md",
-    "Dev/AWS Hub events.md",
-    "Dev/Code for Image processing.md",
-    "Dev/Did mount effect. dont run useEffect 1st time.md",
-    "Dev/Event bublin.md",
-    "Purina/NOTES/July.md",
     "Purina/NOTES",
     "Purina/welcom",
     "Temp",

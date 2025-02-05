@@ -1,4 +1,6 @@
 {
   "obsidian-prism-theme@@color-schemes-dt": "pt-color-scheme-indigo-dt",
-  "obsidian-prism-theme@@dark-accent-color-preset": "pt-accent-color-blue-dt"
+  "obsidian-prism-theme@@dark-accent-color-preset": "pt-accent-color-blue-dt",
+  "anuppuccin-theme-settings@@anuppuccin-accent-toggle": true,
+  "anuppuccin-theme-settings@@anp-translucency-opacity": 1
 }

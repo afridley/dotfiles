@@ -8,5 +8,6 @@
   "showLineNumber": true,
   "spellcheck": true,
   "useMarkdownLinks": true,
-  "tabSize": 2
+  "tabSize": 2,
+  "showInlineTitle": true
 }

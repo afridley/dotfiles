@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "melange"
+lvim.colorscheme = "nordic"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -239,7 +239,45 @@ linters.setup({
 })
 
 -- Additional Plugins
+--
+--
+--
 lvim.plugins = {
+	{
+		"tiagovla/tokyodark.nvim",
+		config = function()
+			require("nordic").setup({
+				styles = {
+					comments = { italic = true }, -- style for comments
+					keywords = { italic = true }, -- style for keywords
+					identifiers = { italic = true }, -- style for identifiers
+					functions = { italic = true }, -- style for functions
+					variables = { italic = true }, -- style for variables
+				},
+			}) -- calling setup is optional
+			vim.cmd([[colorscheme tokyodark]])
+		end,
+	},
+	{
+		"AlexvZyl/nordic.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("nordic").setup({
+				-- Enable bold keywords.
+				bold_keywords = true,
+				-- Enable italic comments.
+				italic_comments = true,
+				-- Enable editor background transparency.
+				transparent = {
+					-- Enable transparent background.
+					bg = true,
+					-- Enable transparent background for floating windows.
+					float = false,
+				},
+			})
+		end,
+	},
 	{
 		"nvim-pack/nvim-spectre",
 		event = "BufRead",
@@ -415,18 +453,6 @@ lvim.plugins = {
 	{ "fcpg/vim-farout" },
 	-- NEW
 	{ "marko-cerovac/material.nvim" },
-	{
-		"rmehri01/onenord.nvim",
-		-- config = function()
-		-- 	require("melange").setup({
-		-- 		styles = {
-		-- 			keywords = "italic",
-		-- 			functions = "italic",
-		-- 			comments = "italic",
-		-- 		},
-		-- 	})
-		-- end,
-	},
 	{ "frenzyexists/aquarium-vim" },
 	-- { "rose-pine/neovim" },
 	{ "rebelot/kanagawa.nvim" },
