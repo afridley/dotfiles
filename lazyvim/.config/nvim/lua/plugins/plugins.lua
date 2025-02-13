@@ -1,5 +1,15 @@
 return {
   {
+    "saghen/blink.cmp",
+    opts = {
+      keymap = {
+        preset = "enter",
+        ["<C-j>"] = { "select_next" },
+        ["<C-k>"] = { "select_prev" },
+      },
+    },
+  },
+  {
     "folke/noice.nvim",
     opts = {
       presets = {

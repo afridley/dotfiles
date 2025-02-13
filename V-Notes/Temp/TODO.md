@@ -113,3 +113,41 @@ Netlify functions not working
 https://github.com/netlify/cli/issues/1076
 https://www.netlify.com/blog/2018/09/13/how-to-run-express.js-apps-with-netlify-functions/
 https://docs.netlify.com/frameworks/express/
+
+----
+
+https://uat-purinareg.ansiradigital.com/service/oauth/v2/token?client_id=281_31nsigz48oogd3895udfmk94ewrssjdjdoiswsw8sk4owogos44sk65&client_secret=z50yp5490ifkmrc5t5fgmn54h6dfwhsdi03js8k8ss00cosw4wo0cwg0ki&grant_type=client_credentials
+
+```
+            {/* <div */ }
+            {/*   key={brand.id} */ }
+            {/*   className="pds-border-t pds-border-t-surface-line pds-py-4 md:pds-py-5" */ }
+            {/* > */ }
+            {/*   <Checkbox */ }
+            {/*     id={`campaigns-${brand.keyName}`} */ }
+            {/*     value={brand.keyName} */ }
+            {/*     checked={getValues('campaigns').includes(brand.keyName)} */ }
+            {/*     onCheckedChange={(value: boolean) => handleCheckedChange(brand.keyName, value)} */ }
+            {/*     {...register('campaigns')} */ }
+            {/*     label={brand.name} */ }
+            {/*   /> */ }
+            {/* </div> */ }
+
+```
+
+```
+            <div
+              key={brand.id}
+              className="pds-border-t pds-border-t-surface-line pds-py-4 md:pds-py-5"
+            >
+              <Checkbox
+                id={`campaigns-${brand.keyName}`}
+                value={brand.keyName}
+                checked={getValues('campaigns').includes(brand.keyName)}
+                onCheckedChange={(value: boolean) => handleCheckedChange(brand.keyName, value)}
+                {...register('campaigns')}
+                label={brand.name}
+              />
+            </div>
+
+```
