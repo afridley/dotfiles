@@ -151,3 +151,275 @@ https://uat-purinareg.ansiradigital.com/service/oauth/v2/token?client_id=281_31n
             </div>
 
 ```
+
+https://dev-h20.purina.com/subscriptions/preferences?uid=NGRmM2VlNmQtYTZiYS0xMWVmLTlhYjgtMGUyZTkwZGJlYWFk
+
+https://dev-h20.purina.com/subscriptions/unsub?brand=PU&uid=NGRmM2VlNmQtYTZiYS0xMWVmLTlhYjgtMGUyZTkwZGJlYWFk
+
+
+----
+```
+meta {
+  breed_species: {
+    label: 'Species',
+    weight: -5,
+    field_id: 'field_species_term',
+    url_alias: 'species'
+  },
+  breed_size: {
+    label: 'Size',
+    weight: -2,
+    field_id: 'field_breed_size',
+    url_alias: 'breed-size'
+  },
+  breed_coat: {
+    label: 'Coat',
+    weight: -1,
+    field_id: 'field_coat',
+    url_alias: 'breed_coat'
+  },
+  breed_energy: {
+    label: 'Energy',
+    weight: 0,
+    field_id: 'field_energy',
+    url_alias: 'breed_energy'
+  },
+  breed_shedding: {
+    label: 'Shedding',
+    weight: 1,
+    field_id: 'field_shedding',
+    url_alias: 'breed_shedding'
+  }
+}
+```
+
+```
+desired {
+  breed_species: {
+    label: 'Species',
+    weight: -5,
+    field_id: 'field_species_term',
+    url_alias: 'species'
+  },
+  breed_size: {
+    label: 'Size',
+    weight: -2,
+    field_id: 'field_breed_size',
+    url_alias: 'breed-size',
+    facets: [
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed-size%3A85',
+        raw_value: '85',
+        values: { value: 'Small', count: 45 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed-size%3A1110',
+        raw_value: '1110',
+        values: { value: 'Medium', count: 61 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed-size%3A87',
+        raw_value: '87',
+        values: { value: 'Large', count: 69 }
+      }
+    ]
+  },
+  breed_coat: {
+    label: 'Coat',
+    weight: -1,
+    field_id: 'field_coat',
+    url_alias: 'breed_coat',
+    facets: [
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_coat%3Ashort',
+        raw_value: 'short',
+        values: { value: 'Short', count: 86 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_coat%3Amedium',
+        raw_value: 'medium',
+        values: { value: 'Medium', count: 75 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_coat%3Along',
+        raw_value: 'long',
+        values: { value: 'Long', count: 63 }
+      }
+    ]
+  },
+  breed_energy: {
+    label: 'Energy',
+    weight: 0,
+    field_id: 'field_energy',
+    url_alias: 'breed_energy',
+    facets: [
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_energy%3Amedium',
+        raw_value: 'medium',
+        values: { value: 'Medium', count: 87 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_energy%3Ahigh',
+        raw_value: 'high',
+        values: { value: 'High', count: 83 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_energy%3Alow',
+        raw_value: 'low',
+        values: { value: 'Low', count: 18 }
+      }
+    ]
+  },
+  breed_shedding: {
+    label: 'Shedding',
+    weight: 1,
+    field_id: 'field_shedding',
+    url_alias: 'breed_shedding',
+    facets: [
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_shedding%3Asome',
+        raw_value: 'some',
+        values: { value: 'Some', count: 128 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_shedding%3Aminimal',
+        raw_value: 'minimal',
+        values: { value: 'Minimal', count: 58 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_shedding%3Aheavy',
+        raw_value: 'heavy',
+        values: { value: 'Heavy', count: 50 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_shedding%3Anone',
+        raw_value: 'none',
+        values: { value: 'None', count: 17 }
+      }
+    ]
+  }
+}
+```
+
+```
+{
+current after
+    id: 'field_coat',
+    values: [
+      {
+        url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Amedium&f%5B1%5D=breed_coat%3Ashort&species=1117',
+        raw_value: 'short',
+        values: { value: 'Short', count: 86 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117',
+        raw_value: 'medium',
+        values: { value: 'Medium', count: 75, active: 'true' }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Along&f%5B1%5D=breed_coat%3Amedium&species=1117',
+        raw_value: 'long',
+        values: { value: 'Long', count: 63 }
+      }
+    ]
+  },
+```
+
+``` 
+desire
+breed_coat: {
+    label: 'Coat',
+    weight: -1,
+    field_id: 'field_coat',
+    url_alias: 'breed_coat',
+    facets: [
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_coat%3Ashort',
+        raw_value: 'short',
+        values: { value: 'Short', count: 86 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_coat%3Amedium',
+        raw_value: 'medium',
+        values: { value: 'Medium', count: 75 }
+      },
+      {
+        url: 'https://dev.purina.com/api/search/breeds?species=1117&f%5B0%5D=breed_coat%3Along',
+        raw_value: 'long',
+        values: { value: 'Long', count: 63 }
+      }
+    ]
+  },
+```
+
+```
+[
+  [
+    {
+      field_coat: [
+        {
+          url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Amedium&f%5B1%5D=breed_coat%3Ashort&species=1117',
+          raw_value: 'short',
+          values: { value: 'Short', count: 86 }
+        },
+        {
+          url: 'https://dev.purina.com/api/search/breeds?species=1117',
+          raw_value: 'medium',
+          values: { value: 'Medium', count: 75, active: 'true' }
+        },
+        {
+          url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Along&f%5B1%5D=breed_coat%3Amedium&species=1117',
+          raw_value: 'long',
+          values: { value: 'Long', count: 63 }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      field_energy: [
+        {
+          url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Amedium&f%5B1%5D=breed_energy%3Ahigh&species=1117',
+          raw_value: 'high',
+          values: { value: 'High', count: 35 }
+        },
+        {
+          url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Amedium&f%5B1%5D=breed_energy%3Amedium&species=1117',
+          raw_value: 'medium',
+          values: { value: 'Medium', count: 34 }
+        },
+        {
+          url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Amedium&f%5B1%5D=breed_energy%3Alow&species=1117',
+          raw_value: 'low',
+          values: { value: 'Low', count: 7 }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      field_shedding: [
+        {
+          url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Amedium&f%5B1%5D=breed_shedding%3Asome&species=1117',
+          raw_value: 'some',
+          values: { value: 'Some', count: 45 }
+        },
+        {
+          url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Amedium&f%5B1%5D=breed_shedding%3Aheavy&species=1117',
+          raw_value: 'heavy',
+          values: { value: 'Heavy', count: 29 }
+        },
+        {
+          url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Amedium&f%5B1%5D=breed_shedding%3Aminimal&species=1117',
+          raw_value: 'minimal',
+          values: { value: 'Minimal', count: 27 }
+        },
+        {
+          url: 'https://dev.purina.com/api/search/breeds?f%5B0%5D=breed_coat%3Amedium&f%5B1%5D=breed_shedding%3Anone&species=1117',
+          raw_value: 'none',
+          values: { value: 'None', count: 9 }
+        }
+      ]
+    }
+  ],
+```

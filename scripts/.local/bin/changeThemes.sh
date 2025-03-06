@@ -16,9 +16,9 @@ if [ $MONTH == 02 ]; then
 fi
 if [ $MONTH == 03 ]; then
   #Mar
-  sed -i'' -e 's/"calvera"/"bogster"/g' ~/dotfiles/lvim/.config/lvim/config.lua
-  sed -i'' -e 's/"calvera"/"bogster"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
-  sed -i'' -e 's/#0d0c1e/#161c23/g' ~/.config/kitty/kitty.conf
+  sed -i'' -e 's/"calvera"/"everblush"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  sed -i'' -e 's/"calvera"/"everblush"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
+  sed -i'' -e 's/#0d0c1e/#0c1417/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 04 ]; then
   #Apr

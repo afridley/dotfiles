@@ -112,6 +112,7 @@ return {
   "jordanbrauer/citylights.nvim",
   "tjdevries/colorbuddy.vim",
   -- Non essential
+  { "Everblush/nvim", name = "everblush" },
   { "sainnhe/everforest" },
   -- {"gruvbox-community/gruvbox"},
   -- {"mhartington/oceanic-next"},
