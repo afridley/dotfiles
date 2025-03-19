@@ -105,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "themes",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -190,7 +190,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "3330f66bed95ee2e",
+  "active": "57d75c89ab16c3a4",
   "lastOpenFiles": [
     "Linux/Possible new color themes.md",
     "Sublime Merge themes.md",
