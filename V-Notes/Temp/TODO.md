@@ -428,3 +428,6 @@ breed_coat: {
 ---
 
 Look into Accordion.
+
+----
+environment = { NETLIFY_IMAGE_CDN = "true", GATSBY_ENABLED_LANGUAGES = "en", GATSBY_DRUPAL_ENDPOINT = 'https://dev-content-purina-h20.pantheonsite.io/' }
