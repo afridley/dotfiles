@@ -79,12 +79,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Temp/TODO.md",
+                "file": "wsl/Install.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TODO"
+              "title": "Install"
             }
           }
         ],
@@ -120,7 +120,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "wsl",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,7 +141,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -206,11 +207,11 @@
   },
   "active": "a9a2e6da2afadf24",
   "lastOpenFiles": [
+    "Temp/TODO.md",
     "wsl/Install.md",
     "Linux/Possible new color themes.md",
     "Sublime Merge themes.md",
     "React Force.md",
-    "Temp/TODO.md",
     "Drupal filtering.md",
     "Typescript/Assertions.md",
     "Typescript/Intersting type for def.md",
