@@ -431,3 +431,41 @@ Look into Accordion.
 
 ----
 environment = { NETLIFY_IMAGE_CDN = "true", GATSBY_ENABLED_LANGUAGES = "en", GATSBY_DRUPAL_ENDPOINT = 'https://dev-content-purina-h20.pantheonsite.io/' }
+
+
+```
+      .then(res => res.data)
+      .catch(async e => {
+        const error = await e.json();
+        const eRes = JSON.parse(error.message.split('response:')[1]);
+
+        if (eRes.detail.code === 404) {
+          throw new Error('User not found');
+        }
+        throw new Error('Could not retrieve active subscriptions');
+      });
+
+```
+
+
+```
+query MyQuery {
+  allMediaDocument {
+    edges {
+      node {
+        relationships {
+          field_media_document {
+            publicUrl
+            url
+          }
+        }
+        path {
+          alias
+        }
+        name
+        id
+      }
+    }
+  }
+}
+```

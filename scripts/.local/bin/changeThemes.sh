@@ -22,9 +22,9 @@ if [ $MONTH == 03 ]; then
 fi
 if [ $MONTH == 04 ]; then
   #Apr
-  sed -i'' -e 's/"bogster"/"everforest"/g' ~/dotfiles/lvim/.config/lvim/config.lua
-  sed -i'' -e 's/"bogster"/"everforest"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
-  sed -i'' -e 's/#161c23/#2b3339/g' ~/.config/kitty/kitty.conf
+  sed -i'' -e 's/"everblush"/"everforest"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  sed -i'' -e 's/"everblush"/"everforest"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
+  sed -i'' -e 's/#0c1417/#2b3339/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 05 ]; then
   #May

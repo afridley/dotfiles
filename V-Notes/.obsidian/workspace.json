@@ -79,12 +79,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wsl/Install.md",
+                "file": "Temp/TODO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Install"
+              "title": "TODO"
             }
           }
         ],
@@ -206,6 +206,7 @@
   },
   "active": "a9a2e6da2afadf24",
   "lastOpenFiles": [
+    "wsl/Install.md",
     "Linux/Possible new color themes.md",
     "Sublime Merge themes.md",
     "React Force.md",
@@ -233,7 +234,6 @@
     "Mayo/3. Next js setup.md",
     "Linux/NVIM.md",
     "Purina/NOTES/Untitled.md",
-    "Purina/NOTES/AXE.md",
     "Purina/NOTES",
     "Purina/welcom",
     "Temp",

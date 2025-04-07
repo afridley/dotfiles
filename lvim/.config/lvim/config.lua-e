@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "calvera"
+lvim.colorscheme = "everblush"
 -- lvim.builtin.lualine = {
 --     active = false,
 --     options = {
@@ -246,7 +246,7 @@ lvim.plugins = {
 	{
 		"tiagovla/tokyodark.nvim",
 		config = function()
-			require("calvera").setup({
+			require("everblush").setup({
 				styles = {
 					comments = { italic = true }, -- style for comments
 					keywords = { italic = true }, -- style for keywords
@@ -263,7 +263,7 @@ lvim.plugins = {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("calvera").setup({
+			require("everblush").setup({
 				-- Enable bold keywords.
 				bold_keywords = true,
 				-- Enable italic comments.
