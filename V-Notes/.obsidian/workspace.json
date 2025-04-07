@@ -120,7 +120,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wsl",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,8 +141,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -207,11 +206,12 @@
   },
   "active": "a9a2e6da2afadf24",
   "lastOpenFiles": [
-    "Temp/TODO.md",
+    "wsl/Install 1.md",
     "wsl/Install.md",
     "Linux/Possible new color themes.md",
     "Sublime Merge themes.md",
     "React Force.md",
+    "Temp/TODO.md",
     "Drupal filtering.md",
     "Typescript/Assertions.md",
     "Typescript/Intersting type for def.md",
@@ -234,7 +234,6 @@
     "Dev/Nextjs.md",
     "Mayo/3. Next js setup.md",
     "Linux/NVIM.md",
-    "Purina/NOTES/Untitled.md",
     "Purina/NOTES",
     "Purina/welcom",
     "Temp",
