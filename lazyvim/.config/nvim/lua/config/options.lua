@@ -5,6 +5,7 @@
 -- lvim.transparent_window = true
 
 -- Theme palette config
+vim.g.lazyvim_eslint_auto_format = true
 vim.g.tokyonight_style = "storm"
 vim.g.everforest_background = "hard" -- soft medium hard
 vim.g.gruvbox_material_background = "soft"

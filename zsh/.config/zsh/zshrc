@@ -86,6 +86,12 @@ export PATH=$PATH:/home/x2/bin
 # export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 compinit
 
+export PNPM_HOME="/Users/andrewfridley/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line

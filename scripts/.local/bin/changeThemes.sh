@@ -28,15 +28,15 @@ if [ $MONTH == 04 ]; then
 fi
 if [ $MONTH == 05 ]; then
   #May
-  sed -i'' -e 's/"everforest"/"darkearth"/g' ~/dotfiles/lvim/.config/lvim/config.lua
-  sed -i'' -e 's/"everforest"/"darkearth"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
-  sed -i'' -e 's/#2b3339/#1c1c1c/g' ~/.config/kitty/kitty.conf
+  sed -i'' -e 's/"everforest"/"nightcity"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  sed -i'' -e 's/"everforest"/"nightcity"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
+  sed -i'' -e 's/#2b3339/#191b29/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 06 ]; then
   #Jun
-  sed -i'' -e 's/"darkearth"/"gruvbox-material"/g' ~/dotfiles/lvim/.config/lvim/config.lua
-  sed -i'' -e 's/"darkearth"/"gruvbox-material"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
-  sed -i'' -e 's/#1c1c1c/#32302F/g' ~/.config/kitty/kitty.conf
+  sed -i'' -e 's/"nightcity"/"gruvbox-material"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  sed -i'' -e 's/"nightcity"/"gruvbox-material"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
+  sed -i'' -e 's/#191b29/#32302F/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 07 ]; then
   #Jul
