@@ -127,3 +127,5 @@ export const Checkbox = React.forwardRef<any, ICheckbox>(
         </Label>
 
 ```
+
+That makes sense. Radix has a thing on all there triggers to avoid polymorphic types called as child that just makes the child the trigger
