@@ -47,15 +47,15 @@ fi
 if [ $MONTH == 08 ]; then
   # original zenburn background was 3f3f3f
   #Aug
-  sed -i'' -e 's/"miramare"/"zenburn"/g' ~/dotfiles/lvim/.config/lvim/config.lua
-  sed -i'' -e 's/"miramare"/"zenburn"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
-  sed -i'' -e 's/#2A2426/#3f3f3f/g' ~/.config/kitty/kitty.conf
+  sed -i'' -e 's/"miramare"/"farout"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  sed -i'' -e 's/"miramare"/"farout"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
+  sed -i'' -e 's/#2A2426/#000000/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 09 ]; then
   #Sept
-  sed -i'' -e 's/"zenburn"/"kanagawa"/g' ~/dotfiles/lvim/.config/lvim/config.lua
-  sed -i'' -e 's/"zenburn"/"kanagawa"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
-  sed -i'' -e 's/#3f3f3f/#1f1f28/g' ~/.config/kitty/kitty.conf
+  sed -i'' -e 's/"farout"/"kanagawa"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  sed -i'' -e 's/"farout"/"kanagawa"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
+  sed -i'' -e 's/#000000/#1f1f28/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 10 ]; then
   #Oct

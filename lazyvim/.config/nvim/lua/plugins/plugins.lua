@@ -8,6 +8,22 @@ return {
   --   },
   -- },
   {
+    "eero-lehtinen/oklch-color-picker.nvim",
+    event = "VeryLazy",
+    version = "*",
+    keys = {
+      -- One handed keymap recommended, you will be using the mouse
+      {
+        "<leader>v",
+        function()
+          require("oklch-color-picker").pick_under_cursor()
+        end,
+        desc = "Color pick under cursor",
+      },
+    },
+    opts = {},
+  },
+  {
     "saghen/blink.cmp",
     opts = {
       keymap = {
@@ -182,7 +198,29 @@ return {
   { "frenzyexists/aquarium-vim" },
   -- { "rose-pine/neovim" },
   { "rebelot/kanagawa.nvim" },
-  { "phha/zenburn.nvim" }, -- needs config
+  { "diegoulloao/neofusion.nvim" },
+  {
+    "maxmx03/fluoromachine.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      local fm = require("fluoromachine")
+
+      fm.setup({
+        glow = true,
+        theme = "retrowave",
+        transparent = true,
+      })
+
+      vim.cmd.colorscheme("fluoromachine")
+    end,
+  },
+  {
+    "phha/zenburn.nvim",
+    config = function()
+      require("zenburn").setup()
+    end,
+  }, -- needs config not working in lazy
   { "shaunsingh/moonlight.nvim" },
-  { "RRethy/nvim-base16" },
+  -- { "RRethy/nvim-base16" },
 }

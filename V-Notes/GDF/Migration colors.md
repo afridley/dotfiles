@@ -1,0 +1,7 @@
+- [x] Tooltip text.
+- [ ] yellow/amber needs to be adjusted per.
+- [x] popover border not appearing.
+- [x] reporting tabs underline is broken.
+- [x] date-range outline is bugged
+- [x] x is still appearing in some search coa's in manifest
+- [x] all absolutes should be checked

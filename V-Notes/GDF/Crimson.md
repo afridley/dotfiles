@@ -54,3 +54,7 @@ CS-FLFL-NI-PR-C0326-W33-S
 }
 
 ```
+
+
+## Stock status indicator 
+* does not seem to be aware of inventory in other carts

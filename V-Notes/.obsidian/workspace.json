@@ -34,9 +34,51 @@
               "icon": "lucide-file",
               "title": "Crimson"
             }
+          },
+          {
+            "id": "28d4d4018f0fee4c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "a29679042d2e3d14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GDF/Migration colors.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Migration colors"
+            }
+          },
+          {
+            "id": "83c11fbb7f4bd7e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GDF/Migration colors.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Migration colors"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -128,10 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Temp/TODO.md"
+                "file": "GDF/Crimson.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of TODO"
+              "title": "Outline of Crimson"
             }
           }
         ],
@@ -144,6 +189,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -152,10 +198,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "68bd122f870e34df",
+  "active": "83c11fbb7f4bd7e5",
   "lastOpenFiles": [
+    "GDF/Product grid component flow.md",
     "GDF/scratch.md",
+    "GDF/Errors.md",
+    "Dev/Tailwind span all cols subgrid.md",
+    "GDF/Migration colors.md",
+    "Linux/Possible new color themes.md",
+    "scroll resize.md",
+    "Untitled.md",
+    "Code",
     "GDF/Crimson.md",
+    "tesmp.md",
+    "TEMP.md",
+    "GDF/Filters.md",
     "GDF/Headers.md",
     "bitbucket terraform.md",
     "WorkNotes/Yougov meeting.md",
@@ -169,18 +226,8 @@
     "Purina/New ticks.md",
     "Typescript/Conditional types.md",
     "Nuke nvim.md",
-    "tesmp.md",
     "GDF",
     "Purina/Def uat ticket.md",
-    "Linux/Possible new color themes.md",
-    "wsl/Install.md",
-    "wsl/Install 1.md",
-    "Sublime Merge themes.md",
-    "React Force.md",
-    "Temp/TODO.md",
-    "Drupal filtering.md",
-    "Typescript/Assertions.md",
-    "Typescript/Intersting type for def.md",
     "Sublime Merge",
     "Typescript",
     "Purina/NOTES",

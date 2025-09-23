@@ -25,6 +25,7 @@ Spring
 
 Summer
 * https://github.com/rose-pine/neovim
+* https://github.com/datsfilipe/min-theme.nvim
 
 
 
