@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GDF/Migration colors.md",
+                "file": "Linux/Possible new color themes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Migration colors"
+              "title": "Possible new color themes"
             }
           }
         ],
@@ -110,7 +110,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "--strip",
+                "query": "color",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -131,7 +131,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -200,11 +201,11 @@
   },
   "active": "83c11fbb7f4bd7e5",
   "lastOpenFiles": [
+    "GDF/Migration colors.md",
     "GDF/Product grid component flow.md",
     "GDF/scratch.md",
     "GDF/Errors.md",
     "Dev/Tailwind span all cols subgrid.md",
-    "GDF/Migration colors.md",
     "Linux/Possible new color themes.md",
     "scroll resize.md",
     "Untitled.md",

@@ -200,26 +200,34 @@ return {
   { "rebelot/kanagawa.nvim" },
   { "diegoulloao/neofusion.nvim" },
   {
+    "dbarenholz/halcyon.nvim",
+    -- priority = 1000,
+    -- lazy = false,
+    -- config = function()
+    --   vim.cmd.colorscheme("halcyon")
+    -- end,
+  },
+  {
     "maxmx03/fluoromachine.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      local fm = require("fluoromachine")
-
-      fm.setup({
-        glow = true,
-        theme = "retrowave",
-        transparent = true,
-      })
-
-      vim.cmd.colorscheme("fluoromachine")
-    end,
+    -- lazy = false,
+    -- priority = 1000,
+    -- config = function()
+    --   local fm = require("fluoromachine")
+    --
+    --   fm.setup({
+    --     glow = true,
+    --     theme = "retrowave",
+    --     transparent = true,
+    --   })
+    --
+    --   -- vim.cmd.colorscheme("fluoromachine")
+    -- end,
   },
   {
     "phha/zenburn.nvim",
-    config = function()
-      require("zenburn").setup()
-    end,
+    -- config = function()
+    --   require("zenburn").setup()
+    -- end,
   }, -- needs config not working in lazy
   { "shaunsingh/moonlight.nvim" },
   -- { "RRethy/nvim-base16" },

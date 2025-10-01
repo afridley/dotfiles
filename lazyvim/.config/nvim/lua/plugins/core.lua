@@ -1,9 +1,10 @@
-return {}
--- return {
---   {
---     "LazyVim/LazyVim",
---     opts = {
---       colorscheme = "calvera",
---     },
---   },
--- }
+return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = function()
+        vim.cmd("colorscheme tokyonight")
+      end,
+    },
+  },
+}

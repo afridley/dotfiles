@@ -59,15 +59,19 @@ if [ $MONTH == 09 ]; then
 fi
 if [ $MONTH == 10 ]; then
   #Oct
-  sed -i'' -e 's/"kanagawa"/"tokyonight"/g' ~/dotfiles/lvim/.config/lvim/config.lua
-  sed -i'' -e 's/"kanagawa"/"tokyonight"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
-  sed -i'' -e 's/#1f1f28/#24283B/g' ~/.config/kitty/kitty.conf
+  sed -i'' -e 's/"kanagawa"/"halcyon"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  sed -i'' -e 's/"kanagawa"/"halcyon"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
+  sed -i'' -e 's/#1f1f28/#1d2433/g' ~/.config/kitty/kitty.conf
+  ##Oct
+  #sed -i'' -e 's/"kanagawa"/"tokyonight"/g' ~/dotfiles/lvim/.config/lvim/config.lua
+  #sed -i'' -e 's/"kanagawa"/"tokyonight"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
+  #sed -i'' -e 's/#1f1f28/#24283B/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 11 ]; then
   #Nov
   sed -i'' -e 's/"tokyonight"/"melange"/g' ~/dotfiles/lvim/.config/lvim/config.lua
   sed -i'' -e 's/"tokyonight"/"melange"/g' ~/dotfiles/lazyvim/.config/nvim/init.lua
-  sed -i'' -e 's/#24283B/#2A2622/g' ~/.config/kitty/kitty.conf
+  sed -i'' -e 's/#1d2433/#2A2622/g' ~/.config/kitty/kitty.conf
 fi
 if [ $MONTH == 12 ]; then
   #Dec
