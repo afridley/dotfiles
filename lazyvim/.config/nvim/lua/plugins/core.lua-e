@@ -1,0 +1,11 @@
+local theme = "melange"
+return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = function()
+        vim.cmd("colorscheme " .. theme)
+      end,
+    },
+  },
+}

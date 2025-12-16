@@ -4,5 +4,11 @@
   "anuppuccin-theme-settings@@anuppuccin-accent-toggle": true,
   "anuppuccin-theme-settings@@anp-translucency-opacity": 1,
   "test@@fonts": "font-Roboto-Condensed",
-  "test@@Header-Icons": "none"
+  "test@@Header-Icons": "none",
+  "encore-settings@@encore-translucency": false,
+  "encore-settings@@encore-translucency-strength": 0.25,
+  "encore-settings@@encore-translucency-blur-amount": 10,
+  "encore-settings@@theme-dark": "encore-theme-dark-slate",
+  "encore-settings@@blur-amount": "encore-blur-off",
+  "encore-settings@@encore-disable-grain": true
 }

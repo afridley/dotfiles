@@ -1,9 +1,9 @@
 {
   "baseFontSize": 18,
-  "translucency": false,
+  "translucency": true,
   "theme": "obsidian",
-  "cssTheme": "Faded",
-  "accentColor": "#4621c0",
+  "cssTheme": "Encore",
+  "accentColor": "#dbaa61",
   "interfaceFontFamily": "Inter",
   "textFontFamily": "Inter",
   "nativeMenus": true,

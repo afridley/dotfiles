@@ -55,30 +55,56 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GDF/Migration colors.md",
+                "file": "GDF/Known Issues with Errors and Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Migration colors"
+              "title": "Known Issues with Errors and Methodology"
             }
           },
           {
-            "id": "83c11fbb7f4bd7e5",
+            "id": "97dc36faff4f59cc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Possible new color themes.md",
+                "file": "GDF/Document Index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Possible new color themes"
+              "title": "Document Index"
+            }
+          },
+          {
+            "id": "746a1549c6cfc34c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/test.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "test"
+            }
+          },
+          {
+            "id": "a9ae0bc5640546c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GDF/Document Index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Document Index"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -131,12 +157,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 287.5
+    "width": 253
   },
   "right": {
     "id": "a27a7821d3bb9fab",
@@ -171,13 +196,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GDF/Crimson.md",
+                "file": "GDF/Refactoring Product schem.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Crimson"
+              "title": "Outline of Refactoring Product schem"
             }
           }
         ],
@@ -196,44 +221,49 @@
       "canvas:Create new canvas": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "tldraw:Create new tldrawing": false
     }
   },
-  "active": "83c11fbb7f4bd7e5",
+  "active": "a9ae0bc5640546c1",
   "lastOpenFiles": [
-    "GDF/Migration colors.md",
-    "GDF/Product grid component flow.md",
     "GDF/scratch.md",
-    "GDF/Errors.md",
-    "Dev/Tailwind span all cols subgrid.md",
-    "Linux/Possible new color themes.md",
-    "scroll resize.md",
-    "Untitled.md",
-    "Code",
+    "GDF/TODO.md",
+    "GDF/Versori.md",
+    "GDF/Known Issues with Errors and Methodology.md",
+    "GDF/Migration colors.md",
+    "GDF/Refactoring Product schem.md",
+    "GDF/Product grid component flow.md",
+    "GDF/Tldraw 2025-12-16 3.15PM.md",
     "GDF/Crimson.md",
-    "tesmp.md",
-    "TEMP.md",
+    "Dev/Nextjs.md",
+    "GDF/Untitled.base",
+    "Excalidraw/Sku Problem.md",
+    "GDF/Untitled.canvas",
+    "GDF/Drawing 2025-12-16 15.13.41.excalidraw.md",
+    "Excalidraw/metrc package pim.excalidraw",
+    "Excalidraw/Link to dutchie excalidraw.md",
+    "Excalidraw/metrc package pim.excalidraw.md",
+    "Excalidraw/Drawing 2025-12-15 12.07.32.excalidraw.md",
+    "Excalidraw/test.md",
+    "Excalidraw/Drawing 2025-12-15 12.06.06.excalidraw.md",
+    "GDF/Document Index.md",
+    "Excalidraw",
+    "Dev/Crazy tasking.md",
+    "GDF/Errors.md",
+    "GDF/Knowledge.md",
     "GDF/Filters.md",
     "GDF/Headers.md",
-    "bitbucket terraform.md",
-    "WorkNotes/Yougov meeting.md",
-    "WorkNotes/What Im working on.md",
-    "WorkNotes/Todo.md",
-    "WorkNotes/Brians review.md",
-    "WorkNotes/BV.md",
-    "WorkNotes/ga ref.md",
-    "WorkNotes/List of possible event_params or other.md",
-    "WorkNotes/Need from api.md",
-    "Purina/New ticks.md",
-    "Typescript/Conditional types.md",
-    "Nuke nvim.md",
+    "Linux/Possible new color themes.md",
+    "Dev/Tailwind span all cols subgrid.md",
+    "scroll resize.md",
+    "Code",
     "GDF",
-    "Purina/Def uat ticket.md",
     "Sublime Merge",
     "Typescript",
     "Purina/NOTES",
     "Purina/welcom",
-    "Temp",
-    "Purina/Amplify"
+    "Temp"
   ]
 }
