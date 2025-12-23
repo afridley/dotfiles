@@ -78,15 +78,15 @@
             }
           },
           {
-            "id": "746a1549c6cfc34c",
+            "id": "3523caed627b816e",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/test.md"
+                "file": "GDF/Drawing 2025-12-22 12.50.55.excalidraw.md"
               },
               "icon": "excalidraw-icon",
-              "title": "test"
+              "title": "Drawing 2025-12-22 12.50.55.excalidraw"
             }
           },
           {
@@ -104,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -161,7 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253
+    "width": 321
   },
   "right": {
     "id": "a27a7821d3bb9fab",
@@ -226,12 +226,17 @@
       "tldraw:Create new tldrawing": false
     }
   },
-  "active": "a9ae0bc5640546c1",
+  "active": "3523caed627b816e",
   "lastOpenFiles": [
+    "GDF/Drawing 2025-12-16 17.12.32.excalidraw.md",
+    "GDF/Drawing 2025-12-22 12.50.55.excalidraw.md",
+    "GDF/Document Index.md",
+    "Excalidraw/Drawing 2025-12-16 17.12.25.excalidraw.md",
+    "Excalidraw/test.md",
+    "GDF/Known Issues with Errors and Methodology.md",
     "GDF/scratch.md",
     "GDF/TODO.md",
     "GDF/Versori.md",
-    "GDF/Known Issues with Errors and Methodology.md",
     "GDF/Migration colors.md",
     "GDF/Refactoring Product schem.md",
     "GDF/Product grid component flow.md",
@@ -242,22 +247,17 @@
     "Excalidraw/Sku Problem.md",
     "GDF/Untitled.canvas",
     "GDF/Drawing 2025-12-16 15.13.41.excalidraw.md",
-    "Excalidraw/metrc package pim.excalidraw",
-    "Excalidraw/Link to dutchie excalidraw.md",
+    "GDF/metrc package pim.excalidraw",
+    "GDF/Link to dutchie excalidraw.md",
     "Excalidraw/metrc package pim.excalidraw.md",
     "Excalidraw/Drawing 2025-12-15 12.07.32.excalidraw.md",
-    "Excalidraw/test.md",
     "Excalidraw/Drawing 2025-12-15 12.06.06.excalidraw.md",
-    "GDF/Document Index.md",
     "Excalidraw",
     "Dev/Crazy tasking.md",
     "GDF/Errors.md",
     "GDF/Knowledge.md",
     "GDF/Filters.md",
     "GDF/Headers.md",
-    "Linux/Possible new color themes.md",
-    "Dev/Tailwind span all cols subgrid.md",
-    "scroll resize.md",
     "Code",
     "GDF",
     "Sublime Merge",
